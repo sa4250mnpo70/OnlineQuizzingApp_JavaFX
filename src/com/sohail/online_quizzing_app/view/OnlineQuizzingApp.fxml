@@ -3,16 +3,250 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.OnlineQuizzingAppController">
-  <children>
-    <Button fx:id="button" layoutX="126.0" layoutY="90.0" onAction="#handleButtonAction" text="Click Me!" />
-    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
-  </children>
+<BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.OnlineQuizzingAppController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="25.0" prefWidth="800.0">
+      <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </Text>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.margin="$x1" />
+          </children>
+        </HBox>
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <expandedPane>
+        <TitledPane fx:id="x2" animated="false" text="User Login">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <GridPane layoutX="0.0" layoutY="1.0" prefHeight="250.0" prefWidth="400.0">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                      <children>
+                        <Text id="txt_loginMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Type in your Username and Password below" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <Label text="Username:" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                      <children>
+                        <Label text="Password:" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <TextField id="txtbox_loginUsername" prefHeight="35.0" prefWidth="250.0" promptText="Your Username">
+                          <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                          </HBox.margin>
+                        </TextField>
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                      <children>
+                        <PasswordField id="txtbox_loginPassword" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="250.0" promptText="Your Password" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                      <children>
+                        <Button id="btn_login" cancelButton="false" defaultButton="true" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="45.0" prefWidth="250.0" text="Login" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="128.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <fx:reference source="x2" />
+        <TitledPane animated="false" text="New User Signup">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <GridPane layoutX="0.0" layoutY="0.0" prefHeight="250.0" prefWidth="400.0">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                      <children>
+                        <Text id="txt_signupMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the form to Signup" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="120.0001220703125" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="35.0" prefWidth="200.0" text="Username:">
+                          <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                          </HBox.margin>
+                        </Label>
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Password:" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Repeat Password:" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                      <children>
+                        <TextField id="txtbox_signupUsername" prefHeight="35.0" prefWidth="250.0" promptText="Something Unique" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                      <children>
+                        <TextField id="txtbox_signupPassword" prefHeight="35.0" prefWidth="250.0" promptText="Your Secret Password" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                      <children>
+                        <PasswordField id="txtbox_signupPassword2" prefHeight="35.0" prefWidth="250.0" promptText="Repeat Your Secret Password" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                      <children>
+                        <Button id="btn_signup" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Signup" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Email:" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <TextField id="txtbox_signupEmail" prefHeight="35.0" prefWidth="250.0" promptText="name@domain.com" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="120.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="280.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </panes>
+      <BorderPane.margin>
+        <Insets bottom="125.0" top="50.0" />
+      </BorderPane.margin>
+    </Accordion>
+  </center>
+  <left>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+  </left>
+  <right>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+  </right>
   <stylesheets>
     <URL value="@styles/OnlineQuizzingApp.css" />
   </stylesheets>
-</AnchorPane>
+  <top>
+    <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+      <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
+          <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@image/logo.jpg" />
+              </image>
+            </ImageView>
+          </children>
+          <HBox.margin>
+            <Insets fx:id="x3" />
+          </HBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" HBox.hgrow="SOMETIMES">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" />
+          </children>
+        </HBox>
+        <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x3">
+          <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+              <children>
+                <Button id="btn_appHelp" mnemonicParsing="false" text="Help !" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                <Button id="btn_appAbout" mnemonicParsing="false" text="About" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                <Button id="btn_appExit" cancelButton="true" mnemonicParsing="false" onAction="#handleAppExitButtonAction" text="Exit" underline="true" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+              </children>
+            </HBox>
+            <VBox prefHeight="50.0" prefWidth="100.0" VBox.vgrow="SOMETIMES">
+              <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+                  <children>
+                    <Text id="txt_headerInfo" strokeType="OUTSIDE" strokeWidth="0.0" text="You are logged in as" visible="false" HBox.hgrow="SOMETIMES" />
+                  </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+                  <children>
+                    <HBox id="HBox" alignment="CENTER" prefHeight="31.0" prefWidth="108.462890625" spacing="5.0" HBox.hgrow="SOMETIMES">
+                      <children>
+                        <Text id="txt_headerUserLoggedInName" strikethrough="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Sohail Alam" visible="false" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                        <Button id="btn_appLogout" alignment="CENTER" cancelButton="false" defaultButton="false" disable="false" mnemonicParsing="false" text="Logout" visible="false" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+  </top>
+</BorderPane>
