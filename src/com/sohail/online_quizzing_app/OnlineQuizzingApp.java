@@ -5,9 +5,6 @@
 package com.sohail.online_quizzing_app;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -16,45 +13,59 @@ import javafx.stage.Stage;
  */
 public class OnlineQuizzingApp extends Application {
 
-    private static boolean isLoggedIn;
+	private static boolean isLoggedIn = false;
+	private static OnlineQuizzingApp instance;
+	private Stage stage;
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
+	public OnlineQuizzingApp() {
+		instance = this;
+	}
 
-    /**
-     * @return the isLoggedIn
-     */
-    public static boolean isIsLoggedIn() {
-        return isLoggedIn;
-    }
+	public static OnlineQuizzingApp getInstance() {
+		return instance;
+	}
 
-    /**
-     * @param isLoggedIn the isLoggedIn to set
-     */
-    public static void setIsLoggedIn(boolean isLoggedIn) {
-        OnlineQuizzingApp.isLoggedIn = isLoggedIn;
-    }
+	/**
+	 * The main() method is ignored in correctly deployed JavaFX
+	 * application. main() serves only as fallback in case the application
+	 * can not be launched through deployment artifacts, e.g., in IDEs with
+	 * limited FX support. NetBeans ignores main().
+	 *
+	 * @param args the command line arguments
+	 */
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-    public OnlineQuizzingApp() {
-        OnlineQuizzingApp.isLoggedIn = false;
-    }
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		try {
+			stage = primaryStage;
+			SceneLoaders.getInstance().gotoLogin(getStage());
+			primaryStage.show();
+		} catch (Exception ex) {
+			//Handle Exception
+		}
+	}
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("view/OnlineQuizzingApp.fxml"));
+	/**
+	 * @return the isLoggedIn
+	 */
+	public static boolean isIsLoggedIn() {
+		return isLoggedIn;
+	}
 
-        Scene scene = new Scene(root);
+	/**
+	 * @param isLoggedIn the isLoggedIn to set
+	 */
+	public static void setIsLoggedIn(boolean isLoggedIn) {
+		OnlineQuizzingApp.isLoggedIn = isLoggedIn;
+	}
 
-        stage.setScene(scene);
-        stage.show();
-    }
+	/**
+	 * @return the stage
+	 */
+	public Stage getStage() {
+		return stage;
+	}
 }

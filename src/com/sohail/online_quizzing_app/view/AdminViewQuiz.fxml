@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminManageUsersController">
+<BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminViewQuizController">
   <bottom>
     <HBox alignment="CENTER" prefHeight="25.0" prefWidth="800.0">
       <children>
@@ -40,12 +40,12 @@
   <left>
     <VBox alignment="CENTER" prefHeight="475.0" prefWidth="150.0" BorderPane.alignment="CENTER">
       <children>
-        <Button fx:id="btn_adminHome" mnemonicParsing="false" onAction="#handleAdminHomeButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
+        <Button fx:id="btn_adminHome" disable="false" mnemonicParsing="false" onAction="#handleAdminHomeButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
           <VBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
-        <Button fx:id="btn_adminManageUsers" cancelButton="false" defaultButton="false" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
+        <Button fx:id="btn_adminManageUsers" mnemonicParsing="false" onAction="#handleAdminManageUsersButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
           <VBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
@@ -55,7 +55,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
-        <Button fx:id="btn_adminViewQuiz" mnemonicParsing="false" onAction="#handleAdminViewQuizButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
+        <Button fx:id="btn_adminViewQuiz" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
           <VBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
@@ -69,7 +69,7 @@
     </VBox>
   </left>
   <stylesheets>
-    <URL value="@styles/adminmanageusers.css" />
+    <URL value="@styles/adminviewquiz.css" />
   </stylesheets>
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
@@ -88,7 +88,7 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App - ADMIN MANAGE USERS" HBox.hgrow="SOMETIMES" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App - ADMIN VIEW QUIZ" HBox.hgrow="SOMETIMES" />
           </children>
           <HBox.margin>
             <Insets />
