@@ -14,24 +14,27 @@
   <bottom>
     <HBox alignment="CENTER" prefHeight="25.0" prefWidth="800.0">
       <children>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES">
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
               </HBox.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.hgrow="SOMETIMES" />
+          </children>
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </HBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.hgrow="SOMETIMES" />
           </children>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
-          </children>
-        </HBox>
-        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.hgrow="SOMETIMES" />
           </children>
         </HBox>
       </children>
@@ -81,7 +84,7 @@
                     </HBox>
                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                       <children>
-                        <Button fx:id="btn_login" cancelButton="false" defaultButton="true" disable="false" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" text="Login">
+                        <Button fx:id="btn_login" cancelButton="false" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="45.0" prefWidth="250.0" text="Login">
                           <HBox.margin>
                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
                           </HBox.margin>
@@ -156,7 +159,7 @@
                     </HBox>
                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                       <children>
-                        <PasswordField fx:id="txtbox_signupPassword" disable="true" editable="true" onKeyReleased="#handleSignupPasswordKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Your Secret Password" HBox.margin="$x1" />
+                        <PasswordField fx:id="txtbox_signupPassword" disable="true" editable="true" onKeyReleased="#handleSignupPasswordKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Your Secret Password" />
                       </children>
                     </HBox>
                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -240,18 +243,18 @@
             </ImageView>
           </children>
           <HBox.margin>
-            <Insets fx:id="x3" />
+            <Insets />
           </HBox.margin>
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES" />
           </children>
           <HBox.margin>
-            <Insets fx:id="x3" />
+            <Insets />
           </HBox.margin>
         </HBox>
-        <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x3">
+        <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
               <children>
