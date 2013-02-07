@@ -14,28 +14,28 @@
   <bottom>
     <HBox alignment="CENTER" prefHeight="25.0" prefWidth="800.0">
       <children>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES">
               <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
               </HBox.margin>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.hgrow="SOMETIMES">
               <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
               </HBox.margin>
             </Text>
           </children>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.hgrow="SOMETIMES" />
           </children>
         </HBox>
-        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.hgrow="SOMETIMES" />
           </children>
         </HBox>
       </children>
@@ -46,27 +46,27 @@
       <children>
         <Button fx:id="btn_adminHome" disable="false" mnemonicParsing="false" onAction="#handleAdminHomeButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
           <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
         <Button fx:id="btn_adminManageUsers" mnemonicParsing="false" onAction="#handleAdminManageUsersButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
           <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
         <Button fx:id="btn_adminManageQuiz" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz">
           <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
         <Button fx:id="btn_adminViewQuiz" mnemonicParsing="false" onAction="#handleAdminViewQuizButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
           <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
         <Button fx:id="btn_adminViewScores" mnemonicParsing="false" onAction="#handleAdminViewScoresButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Scores">
           <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </VBox.margin>
         </Button>
       </children>
@@ -78,9 +78,9 @@
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
       <children>
-        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
-            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
               <image>
                 <Image url="@image/logo.jpg" />
               </image>
@@ -90,31 +90,41 @@
             <Insets />
           </HBox.margin>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" HBox.hgrow="SOMETIMES">
+        <VBox id="VBox" alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="5.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App - ADMIN MANAGE QUIZ" HBox.hgrow="SOMETIMES" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+              <children>
+                <Button mnemonicParsing="false" onAction="#handleAppToggleFullScreenButtonAction" prefHeight="100.0" prefWidth="400.0" text="Toggle Full Screen Mode" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </Button>
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+              <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN MANAGE QUIZ" HBox.hgrow="SOMETIMES" />
+              </children>
+            </HBox>
           </children>
-          <HBox.margin>
-            <Insets />
-          </HBox.margin>
-        </HBox>
+        </VBox>
         <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
               <children>
                 <Button fx:id="btn_appHelp" mnemonicParsing="false" onAction="#handleAppHelpButtonEvent" text="Help !" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
                 <Button fx:id="btn_appAbout" mnemonicParsing="false" onAction="#handleAppAboutButtonEvent" text="About" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
                 <Button fx:id="btn_appExit" cancelButton="true" mnemonicParsing="false" onAction="#handleAppExitButtonAction" text="Exit" underline="true" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
               </children>
@@ -132,12 +142,12 @@
                       <children>
                         <Text fx:id="txt_headerUserLoggedInName" strikethrough="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Sohail Alam" visible="true" HBox.hgrow="SOMETIMES">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Text>
                         <Button fx:id="btn_appLogout" alignment="CENTER" cancelButton="false" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleAppLogoutButtonAction" text="Logout" visible="true" HBox.hgrow="SOMETIMES">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Button>
                       </children>

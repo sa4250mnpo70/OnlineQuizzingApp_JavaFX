@@ -18,21 +18,22 @@
           <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES">
               <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
               </HBox.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.hgrow="SOMETIMES" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </HBox.margin>
+            </Text>
           </children>
-          <HBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-          </HBox.margin>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2013" HBox.hgrow="SOMETIMES" />
           </children>
         </HBox>
-        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By: Sohail Alam" HBox.hgrow="SOMETIMES" />
           </children>
@@ -68,7 +69,7 @@
                       <children>
                         <TextField fx:id="txtbox_loginUsername" prefHeight="35.0" prefWidth="250.0" promptText="Your Username">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </TextField>
                       </children>
@@ -77,7 +78,7 @@
                       <children>
                         <PasswordField fx:id="txtbox_loginPassword" alignment="CENTER_LEFT" disable="false" prefHeight="35.0" prefWidth="250.0" promptText="Your Password">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </PasswordField>
                       </children>
@@ -86,7 +87,7 @@
                       <children>
                         <Button fx:id="btn_login" cancelButton="false" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="45.0" prefWidth="250.0" text="Login">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Button>
                       </children>
@@ -125,7 +126,7 @@
                       <children>
                         <Label alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="35.0" prefWidth="200.0" text="Username:">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Label>
                       </children>
@@ -134,7 +135,7 @@
                       <children>
                         <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Password:">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Label>
                       </children>
@@ -143,7 +144,7 @@
                       <children>
                         <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Repeat Password:">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Label>
                       </children>
@@ -152,7 +153,7 @@
                       <children>
                         <TextField fx:id="txtbox_signupUsername" disable="true" editable="true" onKeyReleased="#handleSignupUsernameKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Something Unique">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </TextField>
                       </children>
@@ -166,7 +167,7 @@
                       <children>
                         <PasswordField fx:id="txtbox_signupPassword2" disable="true" editable="true" onKeyReleased="#handleSignupPassword2KeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Repeat Your Secret Password">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </PasswordField>
                       </children>
@@ -175,7 +176,7 @@
                       <children>
                         <Button fx:id="btn_signup" defaultButton="true" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Signup">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Button>
                       </children>
@@ -184,7 +185,7 @@
                       <children>
                         <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Email:">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Label>
                       </children>
@@ -193,7 +194,7 @@
                       <children>
                         <TextField fx:id="txtbox_signupEmail" onKeyReleased="#handleSignupEmailKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="name@domain.com">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </TextField>
                       </children>
@@ -234,9 +235,9 @@
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
       <children>
-        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
-            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
               <image>
                 <Image url="@image/logo.jpg" />
               </image>
@@ -246,31 +247,41 @@
             <Insets />
           </HBox.margin>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" HBox.hgrow="SOMETIMES">
+        <VBox id="VBox" alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="5.0" HBox.hgrow="SOMETIMES">
           <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Online Quizzing App" HBox.hgrow="SOMETIMES" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+              <children>
+                <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="400.0" text="Toggle Full Screen Mode" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </Button>
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+              <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN PAGE" HBox.hgrow="SOMETIMES" />
+              </children>
+            </HBox>
           </children>
-          <HBox.margin>
-            <Insets />
-          </HBox.margin>
-        </HBox>
+        </VBox>
         <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
           <children>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
               <children>
-                <Button fx:id="btn_appHelp" mnemonicParsing="false" text="Help !" HBox.hgrow="SOMETIMES">
+                <Button fx:id="btn_appHelp" mnemonicParsing="false" onAction="#handleAppHelpButtonEvent" text="Help !" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
-                <Button fx:id="btn_appAbout" mnemonicParsing="false" text="About" HBox.hgrow="SOMETIMES">
+                <Button fx:id="btn_appAbout" mnemonicParsing="false" onAction="#handleAppAboutButtonEvent" text="About" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
                 <Button fx:id="btn_appExit" cancelButton="true" mnemonicParsing="false" onAction="#handleAppExitButtonAction" text="Exit" underline="true" HBox.hgrow="SOMETIMES">
                   <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
               </children>
@@ -288,12 +299,12 @@
                       <children>
                         <Text fx:id="txt_headerUserLoggedInName" strikethrough="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Sohail Alam" visible="false" HBox.hgrow="SOMETIMES">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Text>
                         <Button fx:id="btn_appLogout" alignment="CENTER" cancelButton="false" defaultButton="false" disable="false" mnemonicParsing="false" text="Logout" visible="false" HBox.hgrow="SOMETIMES">
                           <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                           </HBox.margin>
                         </Button>
                       </children>
