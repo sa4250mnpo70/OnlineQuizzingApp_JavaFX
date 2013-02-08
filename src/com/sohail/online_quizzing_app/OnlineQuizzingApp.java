@@ -56,7 +56,7 @@ public class OnlineQuizzingApp extends Application {
 //            } else {
 //                SceneLoaders.getInstance().doFullScreen(false, stage);
 //            }
-            
+
             primaryStage.show();
         } catch (Exception ex) {
             //Handle Exception

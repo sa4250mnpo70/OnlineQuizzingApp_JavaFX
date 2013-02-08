@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.fxdialogbox.FXDialogBoxController">
+    <children>
+        <GridPane layoutX="0.0" layoutY="0.0" prefHeight="249.99990000000253" prefWidth="500.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" padding="$x1" prefHeight="36.0" prefWidth="500.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+                    <children>
+                        <Text fx:id="txt_dialogHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" HBox.hgrow="SOMETIMES">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                            </HBox.margin>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.rowSpan="2">
+                    <children>
+                        <ImageView fx:id="image_dialogHeader" fitHeight="72.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="false">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox padding="$x1" prefHeight="36.0" prefWidth="486.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.margin="$x1" GridPane.rowIndex="2" GridPane.rowSpan="3">
+                    <children>
+                        <TextArea fx:id="txtfld_dialogContent" editable="false" prefHeight="108.0" prefWidth="500.0" text="This is a message" wrapText="true" HBox.margin="$x1" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <children>
+                        <Button fx:id="btn_dialogAccept" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Yes" HBox.margin="$x1" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                    <children>
+                        <Button fx:id="btn_dialogDecline" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="No" HBox.margin="$x1" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                    <children>
+                        <Button fx:id="btn_dialogCancel" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Cancel" HBox.margin="$x1" />
+                    </children>
+                </HBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </children>
+    <stylesheets>
+        <URL value="@dialogbox.css" />
+    </stylesheets>
+</AnchorPane>

@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -64,6 +65,24 @@ public class AdminAddQuestionController implements Initializable {
     @FXML
     private void handleAppLogoutButtonAction(ActionEvent event) {
         CommonEventHandlers.getInstance().handleAppLogoutButtonAction(event);
+    }
+    
+    /**
+     * Click and Hold to make window draggable
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+    
+    /**
+     * Drag to drag window
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
     }
 
     /**

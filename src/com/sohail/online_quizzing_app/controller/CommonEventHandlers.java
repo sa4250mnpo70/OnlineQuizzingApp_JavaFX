@@ -7,6 +7,7 @@ package com.sohail.online_quizzing_app.controller;
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
 import javafx.event.ActionEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -14,6 +15,8 @@ import javafx.event.ActionEvent;
  */
 public class CommonEventHandlers {
 
+    private double xOffset = 0;
+    private double yOffset = 0;
     private static CommonEventHandlers instance = new CommonEventHandlers();
 
     private CommonEventHandlers() {
@@ -57,8 +60,27 @@ public class CommonEventHandlers {
     }
 
     /**
-     * Toggle Full Screen Behavior
+     * Click and Hold to make window draggable
      * @param event 
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        xOffset = event.getSceneX();
+        yOffset = event.getSceneY();
+    }
+
+    /**
+     * Drag to drag window
+     * @param event 
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        OnlineQuizzingApp.getInstance().getStage().setX(event.getScreenX() - xOffset);
+        OnlineQuizzingApp.getInstance().getStage().setY(event.getScreenY() - yOffset);
+    }
+
+    /**
+     * Toggle Full Screen Behavior
+     *
+     * @param event
      */
     synchronized public void handleAppToggleFullScreenButtonAction(ActionEvent event) {
         if (OnlineQuizzingApp.getInstance().getStage().isFullScreen()) {

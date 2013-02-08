@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -77,6 +78,25 @@ public class AdminHomeController implements Initializable {
     private void handleAppLogoutButtonAction(ActionEvent event) {
         CommonEventHandlers.getInstance().handleAppLogoutButtonAction(event);
     }
+    
+    /**
+     * Click and Hold to make window draggable
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+    
+    /**
+     * Drag to drag window
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
+
 
     /**
      * Toggle Full Screen Behavior
@@ -86,12 +106,11 @@ public class AdminHomeController implements Initializable {
     public void handleAppToggleFullScreenButtonAction(ActionEvent event) {
         CommonEventHandlers.getInstance().handleAppToggleFullScreenButtonAction(event);
     }
-    
+
     /*
      * Show the User Management Scene 
      * @param event 
      */
-
     @FXML
     private void handleAdminManageUsersButtonEvent(ActionEvent event) {
         //Load the user management scene

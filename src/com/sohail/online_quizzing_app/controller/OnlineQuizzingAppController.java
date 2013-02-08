@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 /**
@@ -107,6 +108,25 @@ public class OnlineQuizzingAppController implements Initializable {
     private void handleAppLogoutButtonAction(ActionEvent event) {
         CommonEventHandlers.getInstance().handleAppLogoutButtonAction(event);
     }
+    
+    /**
+     * Click and Hold to make window draggable
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+    
+    /**
+     * Drag to drag window
+     * @param event 
+     */
+    @FXML
+    private void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
+
 
     /**
      * Toggle Full Screen Behavior

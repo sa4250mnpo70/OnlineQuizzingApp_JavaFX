@@ -9,6 +9,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -107,14 +108,12 @@ public class SceneLoaders implements AllScenesInterface {
      */
     synchronized public Parent replaceSceneContent(String fxml, String stylesheet, Stage stage) throws Exception {
 
-        double stageWidth = stage.getWidth();
-        double stageHeight = stage.getHeight();
-
         Parent page = (Parent) FXMLLoader.load(OnlineQuizzingApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
         Scene scene = stage.getScene();
         if (scene == null) {
-            scene = new Scene(page, stageWidth, stageHeight);
+            scene = new Scene(page);
             scene.getStylesheets().add(OnlineQuizzingApp.class.getResource(stylesheet).toExternalForm());
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(scene);
         } else {
             stage.getScene().setRoot(page);
@@ -122,7 +121,7 @@ public class SceneLoaders implements AllScenesInterface {
         //stage.sizeToScene();
         return page;
     }
-    
+
     /*
      * Use this method to switch between Full Screen Mode and Normal Screen Mode.
      */
