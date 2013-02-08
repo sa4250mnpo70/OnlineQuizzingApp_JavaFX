@@ -1,0 +1,15 @@
+/* 
+    Document   : CommonStyles
+    Created on : 8 Feb, 2013, 5:46:17 PM
+    Author     : sohail.alam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.root {
+    -fx-background-image: url("../image/background.jpg");
+}
+

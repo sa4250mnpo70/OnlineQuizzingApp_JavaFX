@@ -672,7 +672,8 @@
     </VBox>
   </right>
   <stylesheets>
-    <URL value="@styles/adminaddquestion.css" />
+    <URL value="@styles/AdminAddQuestion.css" />
+    <URL value="@styles/OnlineQuizzingApp.css" />
   </stylesheets>
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">

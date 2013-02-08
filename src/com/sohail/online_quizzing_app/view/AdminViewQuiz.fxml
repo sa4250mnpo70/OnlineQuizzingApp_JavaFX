@@ -73,7 +73,8 @@
     </VBox>
   </left>
   <stylesheets>
-    <URL value="@styles/adminviewquiz.css" />
+    <URL value="@styles/CommonStyles.css" />
+    <URL value="@styles/AdminViewQuiz.css" />
   </stylesheets>
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">

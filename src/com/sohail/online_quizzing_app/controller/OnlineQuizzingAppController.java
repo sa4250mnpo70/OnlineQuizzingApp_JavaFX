@@ -16,14 +16,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 /**
  *
  * @author sohail.alam
  */
-public class OnlineQuizzingAppController implements Initializable {
+public class OnlineQuizzingAppController extends CommonEventHandlers implements Initializable {
 
     @FXML
     private Button btn_appHelp;
@@ -66,75 +65,6 @@ public class OnlineQuizzingAppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
-    /*
-     * Display an about page
-     *
-     * @param event
-     */
-    @FXML
-    private void handleAppAboutButtonEvent(ActionEvent event) {
-        CommonEventHandlers.getInstance().handleAppAboutButtonEvent(event);
-    }
-
-    /*
-     * Show a help window
-     *
-     * @param event
-     */
-    @FXML
-    private void handleAppHelpButtonEvent(ActionEvent event) {
-        CommonEventHandlers.getInstance().handleAppHelpButtonEvent(event);
-    }
-
-    /*
-     * Exit from the application
-     *
-     * @param event
-     */
-    @FXML
-    private void handleAppExitButtonAction(ActionEvent event) {
-        CommonEventHandlers.getInstance().handleAppExitButtonAction(event);
-    }
-
-    /*
-     * Logout the user, but keep the app running. Also, redirect to the login
-     * page
-     *
-     * @param event
-     */
-    @FXML
-    private void handleAppLogoutButtonAction(ActionEvent event) {
-        CommonEventHandlers.getInstance().handleAppLogoutButtonAction(event);
-    }
-    
-    /**
-     * Click and Hold to make window draggable
-     * @param event 
-     */
-    @FXML
-    private void handleAppMouseClick_Hold(MouseEvent event) {
-        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
-    }
-    
-    /**
-     * Drag to drag window
-     * @param event 
-     */
-    @FXML
-    private void handleAppMouseDrag(MouseEvent event) {
-        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
-    }
-
-
-    /**
-     * Toggle Full Screen Behavior
-     *
-     * @param event
-     */
-    public void handleAppToggleFullScreenButtonAction(ActionEvent event) {
-        CommonEventHandlers.getInstance().handleAppToggleFullScreenButtonAction(event);
     }
 
 

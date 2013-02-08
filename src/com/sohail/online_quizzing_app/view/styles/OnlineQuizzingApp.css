@@ -6,9 +6,4 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
-}
-.root {
-    -fx-background-image: url("../image/background.jpg");
-}
+

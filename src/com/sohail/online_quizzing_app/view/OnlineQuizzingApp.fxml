@@ -230,6 +230,7 @@
     <AnchorPane prefHeight="200.0" prefWidth="200.0" />
   </right>
   <stylesheets>
+    <URL value="@styles/CommonStyles.css" />
     <URL value="@styles/OnlineQuizzingApp.css" />
   </stylesheets>
   <top>

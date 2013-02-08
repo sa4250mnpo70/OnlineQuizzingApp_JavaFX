@@ -72,8 +72,40 @@
       </children>
     </VBox>
   </left>
+  <right>
+    <VBox alignment="CENTER" prefHeight="475.0" prefWidth="150.0">
+      <children>
+        <Button id="btn_adminHome" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Button>
+        <Button id="btn_adminManageUsers" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Button>
+        <Button id="btn_adminManageQuiz" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Button>
+        <Button id="btn_adminViewQuiz" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Button>
+        <Button id="btn_adminViewScores" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="View Scores">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Button>
+      </children>
+    </VBox>
+  </right>
   <stylesheets>
-    <URL value="@styles/adminmanagequiz.css" />
+    <URL value="@styles/CommonStyles.css" />
+    <URL value="@styles/AdminManageQuiz.css" />
   </stylesheets>
   <top>
     <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
