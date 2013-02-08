@@ -45,19 +45,19 @@ public class OnlineQuizzingApp extends Application {
         try {
             stage = primaryStage;
             SceneLoaders.getInstance().gotoLogin(getStage());
-            primaryStage.show();
 
-//            //Show dialog requesting full screen mode
-//            DialogResponse response = Dialogs.showConfirmDialog(stage,
-//                    "Do you want to continue with Full Screen Enabled. You may also switch between Full Screen and Normal Screen later.",
-//                    "For a better visual experience, it is recommended to run this application in Full Screen Mode.",
-//                    "Full Screen Access", DialogOptions.YES_NO);
-//            if (response.equals(response.YES)) {
-//                SceneLoaders.getInstance().doFullScreen(true, stage);
-//            } else {
-//                SceneLoaders.getInstance().doFullScreen(false, stage);
-//            }
+            //Show dialog requesting full screen mode
+            DialogResponse response = Dialogs.showConfirmDialog(stage,
+                    "Do you want to continue with Full Screen Enabled. You may also switch between Full Screen and Normal Screen later.",
+                    "For a better visual experience, it is recommended to run this application in Full Screen Mode.",
+                    "Full Screen Access", DialogOptions.YES_NO);
+            if (response.equals(response.YES)) {
+                SceneLoaders.getInstance().doFullScreen(true, stage);
+            } else {
+                SceneLoaders.getInstance().doFullScreen(false, stage);
+            }
             
+            primaryStage.show();
         } catch (Exception ex) {
             //Handle Exception
         }
