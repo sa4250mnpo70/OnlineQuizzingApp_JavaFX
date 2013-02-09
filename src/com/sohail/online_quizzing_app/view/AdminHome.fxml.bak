@@ -3,15 +3,87 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminHomeController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>
+  <center>
+    <GridPane>
+      <children>
+        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="1" GridPane.rowSpan="4">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="261.0" text="Subject" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="141.0" text="Topic" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="68.0" text="Duration" />
+          </columns>
+        </TableView>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a Quiz to see Details" />
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="View Quiz" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Edit Quiz" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Delete Quiz" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="New Quiz" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+          </children>
+        </VBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="6" GridPane.rowSpan="4" GridPane.vgrow="SOMETIMES">
+          <children>
+            <PieChart id="PieChart" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="6" GridPane.rowSpan="4" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextArea editable="false" prefHeight="-1.0" prefWidth="-1.0" wrapText="true" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
   <left>
     <fx:include source="_AppAdminSideBar.fxml" />
   </left>
+  <stylesheets>
+    <URL value="@styles/AdminHome.css" />
+  </stylesheets>
   <top>
     <fx:include source="_AppHeader.fxml" />
   </top>

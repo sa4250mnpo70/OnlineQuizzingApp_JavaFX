@@ -95,6 +95,28 @@ public class SceneLoaders implements AllScenesInterface {
             e.printStackTrace();
         }
     }
+    
+    /*
+     * Admin Add New Quiz
+     */
+    synchronized public void gotoAdminAddNewQuiz(Stage stage) {
+        try {
+            replaceSceneContent(ADMIN_ADD_NEW_QUIZ_FXML, ADMIN_ADD_NEW_QUIZ_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    /*
+     * Admin Add Question & Option
+     */
+    synchronized public void gotoAdminAddQuestion(Stage stage) {
+        try {
+            replaceSceneContent(ADMIN_ADD_QUESTION_FXML, ADMIN_ADD_QUESTION_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * This method replaces one scene with another. No need to call it

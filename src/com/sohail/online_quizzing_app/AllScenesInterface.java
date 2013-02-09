@@ -11,6 +11,7 @@ package com.sohail.online_quizzing_app;
 public interface AllScenesInterface {
 
     //FXML Source
+    public static final String ADMIN_ADD_NEW_QUIZ_FXML = "view/AdminAddNewQuiz.fxml";
     public static final String ADMIN_ADD_QUESTION_FXML = "view/AdminAddQuestion.fxml";
     public static final String ADMIN_HOME_FXML = "view/AdminHome.fxml";
     public static final String ADMIN_MANAGE_QUIZ_FXML = "view/AdminManageQuiz.fxml";
@@ -20,6 +21,7 @@ public interface AllScenesInterface {
     public static final String ONLINE_QUIZZING_APP_FXML = "view/OnlineQuizzingApp.fxml";
     
     //Stylesheet Source
+    public static final String ADMIN_ADD_NEW_QUIZ_CSS = "view/styles/AdminAddNewQuiz.css";
     public static final String ADMIN_ADD_QUESTION_CSS = "view/styles/AdminAddQuestion.css";
     public static final String ADMIN_HOME_CSS = "view/styles/AdminHome.css";
     public static final String ADMIN_MANAGE_USERS_CSS = "view/styles/AdminManageUsers.css";

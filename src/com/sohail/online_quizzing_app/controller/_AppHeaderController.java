@@ -132,7 +132,10 @@ public class _AppHeaderController implements Initializable {
             }
 
             switch (stageTitle) {
-                case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
+                case AllScenesInterface.ADMIN_ADD_NEW_QUIZ_FXML:
+                    txt_headerTitle.setText("ADMIN: Add New Quiz");
+                    break;
+                 case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
                     txt_headerTitle.setText("ADMIN: Add New Question");
                     break;
                 case AllScenesInterface.ADMIN_HOME_FXML:

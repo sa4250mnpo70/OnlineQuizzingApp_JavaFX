@@ -16,22 +16,22 @@ import javafx.fxml.Initializable;
  *
  * @author sohail.alam
  */
-public class AdminManageQuizController implements Initializable {
+public class AdminAddNewQuizController implements Initializable {
 
     /*
      * Show the Admin Add Question Scene 
      * @param event 
      */
-    synchronized public void handleAdminAddNewQuizButtonEvent(ActionEvent event) {
+    synchronized public void handleAdminAddQuestionButtonEvent(ActionEvent event) {
         //Load the user management scene
-        SceneLoaders.getInstance().gotoAdminAddNewQuiz(OnlineQuizzingApp.getInstance().getStage());
+        SceneLoaders.getInstance().gotoAdminAddQuestion(OnlineQuizzingApp.getInstance().getStage());
     }
-    
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
+    }    
 }

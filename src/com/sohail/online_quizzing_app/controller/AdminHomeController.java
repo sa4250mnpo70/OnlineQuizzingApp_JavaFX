@@ -6,9 +6,7 @@ package com.sohail.online_quizzing_app.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,7 +14,6 @@ import javafx.scene.control.Button;
  * @author sohail.alam
  */
 public class AdminHomeController implements Initializable {
-
 
     /**
      * Initializes the controller class.

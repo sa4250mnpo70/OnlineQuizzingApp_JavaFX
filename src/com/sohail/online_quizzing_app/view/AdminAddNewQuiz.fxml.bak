@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AdminAddNewQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddNewQuizController">
+  <bottom>
+    <fx:include source="_AppFooter.fxml" />
+  </bottom>
+  <center>
+    <GridPane>
+      <children>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Analog Electronics" HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Bipolar Junction Transistor" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Subject: " HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </Label>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Topic: " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefHeight="-1.0" prefWidth="-1.0" promptText="30 (in Minutes)" HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </TextField>
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefHeight="-1.0" prefWidth="-1.0" promptText="Format: DD/MM/YYYY" HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Time Limit:  " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Due Date: " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Description: " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextArea prefHeight="-1.0" prefWidth="200.0" promptText="Type in a description about this quiz." wrapText="true" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="7" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefWidth="200.0" promptText="Example: 20" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Total Questions To be solved per Quiz Session: " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="185.9998779296875" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="7" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField prefWidth="200.0" promptText="Example: 100" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Total Questions In Questionbank: " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="8" GridPane.rowSpan="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Cancel Quiz Creation" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="8" GridPane.rowSpan="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Button mnemonicParsing="false" onAction="#handleAdminAddQuestionButtonEvent" prefHeight="200.0" prefWidth="200.0" text="Start Quiz Creation" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <left>
+    <fx:include source="_AppAdminSideBar.fxml" />
+  </left>
+  <stylesheets>
+    <URL value="@styles/AdminAddNewQuiz.css" />
+  </stylesheets>
+  <top>
+    <fx:include source="_AppHeader.fxml" />
+  </top>
+</BorderPane>
