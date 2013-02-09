@@ -17,7 +17,7 @@ public class CommonEventHandlers {
 
     private double xOffset = 0;
     private double yOffset = 0;
-    
+
     //*********** All Events Common To Entire Application
     /**
      *
@@ -53,7 +53,8 @@ public class CommonEventHandlers {
 
     /**
      * Click and Hold to make window draggable
-     * @param event 
+     *
+     * @param event
      */
     synchronized public void handleAppMouseClick_Hold(MouseEvent event) {
         xOffset = event.getSceneX();
@@ -62,11 +63,14 @@ public class CommonEventHandlers {
 
     /**
      * Drag to drag window
-     * @param event 
+     *
+     * @param event
      */
     synchronized public void handleAppMouseDrag(MouseEvent event) {
-        OnlineQuizzingApp.getInstance().getStage().setX(event.getScreenX() - xOffset);
-        OnlineQuizzingApp.getInstance().getStage().setY(event.getScreenY() - yOffset);
+        if (!OnlineQuizzingApp.getInstance().getStage().isFullScreen()) {
+            OnlineQuizzingApp.getInstance().getStage().setX(event.getScreenX() - xOffset);
+            OnlineQuizzingApp.getInstance().getStage().setY(event.getScreenY() - yOffset);
+        }
     }
 
     /**
