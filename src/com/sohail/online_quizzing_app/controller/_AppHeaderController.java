@@ -118,5 +118,45 @@ public class _AppHeaderController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        String stageTitle = OnlineQuizzingApp.getInstance().getStage().getTitle();
+        try {
+
+            if (stageTitle.equals(AllScenesInterface.ONLINE_QUIZZING_APP_FXML)) {
+                txt_headerInfo.setVisible(false);
+                txt_headerUserLoggedInName.setVisible(false);
+                btn_appLogout.setVisible(false);
+            } else {
+                txt_headerInfo.setVisible(true);
+                txt_headerUserLoggedInName.setVisible(true);
+                btn_appLogout.setVisible(true);
+            }
+
+            switch (stageTitle) {
+                case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
+                    txt_headerTitle.setText("ADMIN: Add New Question");
+                    break;
+                case AllScenesInterface.ADMIN_HOME_FXML:
+                    txt_headerTitle.setText("ADMIN: Home");
+                    break;
+                case AllScenesInterface.ADMIN_MANAGE_QUIZ_FXML:
+                    txt_headerTitle.setText("ADMIN: Manage Quiz");
+                    break;
+                case AllScenesInterface.ADMIN_MANAGE_USERS_FXML:
+                    txt_headerTitle.setText("ADMIN: Manage Users");
+                    break;
+                case AllScenesInterface.ADMIN_VIEW_QUIZ_FXML:
+                    txt_headerTitle.setText("ADMIN: View Quiz");
+                    break;
+                case AllScenesInterface.ADMIN_VIEW_SCORES_FXML:
+                    txt_headerTitle.setText("ADMIN: View Scores");
+                    break;
+                case AllScenesInterface.ONLINE_QUIZZING_APP_FXML:
+                    txt_headerTitle.setText("Welcome To Online Quizzing App!!");
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+        } catch (Exception e) {
+        }
     }
 }

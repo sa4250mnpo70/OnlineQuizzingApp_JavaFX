@@ -19,7 +19,7 @@
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </Button>
-    <Button fx:id="btn_adminManageQuiz" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz" visible="true">
+    <Button fx:id="btn_adminManageQuiz" disable="false" mnemonicParsing="false" onAction="#handleAdminManageQuizButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz" visible="true">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>

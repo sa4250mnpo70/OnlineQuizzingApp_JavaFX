@@ -108,6 +108,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     synchronized public Parent replaceSceneContent(String fxml, String stylesheet, Stage stage) throws Exception {
 
+        stage.setTitle(fxml);
         Parent page = (Parent) FXMLLoader.load(OnlineQuizzingApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
         Scene scene = stage.getScene();
         if (scene == null) {
