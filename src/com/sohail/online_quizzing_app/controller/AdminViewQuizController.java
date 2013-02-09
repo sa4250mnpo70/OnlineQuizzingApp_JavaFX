@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author sohail.alam
  */
-public class AdminViewQuizController extends CommonEventHandlers implements Initializable {
+public class AdminViewQuizController implements Initializable {
 
     /**
      * Initializes the controller class.

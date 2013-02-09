@@ -22,24 +22,12 @@ import javafx.scene.text.Text;
  *
  * @author sohail.alam
  */
-public class OnlineQuizzingAppController extends CommonEventHandlers implements Initializable {
+public class OnlineQuizzingAppController implements Initializable {
 
-    @FXML
-    private Button btn_appHelp;
-    @FXML
-    private Button btn_appAbout;
-    @FXML
-    private Button btn_appExit;
-    @FXML
-    private Button btn_appLogout;
     @FXML
     private Button btn_login;
     @FXML
     private Button btn_signup;
-    @FXML
-    private Text txt_headerInfo;
-    @FXML
-    private Text txt_headerUserLoggedInName;
     @FXML
     private Text txt_loginMessage;
     @FXML

@@ -50,7 +50,7 @@
     -->
     
     <!-- ********************************************************************* -->
-    <!-- Self Contained Application -->
+    <!-- Self Contained Application >
     <target name="-post-jfx-deploy">
         <fx:deploy width="${javafx.run.width}" height="${javafx.run.height}"
                    nativeBundles="all"
@@ -63,6 +63,7 @@
             <fx:info title="${application.title}" vendor="${application.vendor}"/>
         </fx:deploy>
     </target>
+    <! -->
     <!-- ********************************************************************* -->
 
 </project>

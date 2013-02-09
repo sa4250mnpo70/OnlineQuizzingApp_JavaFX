@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author sohail.alam
  */
-public class AdminViewScoresController extends CommonEventHandlers implements Initializable {
+public class AdminViewScoresController implements Initializable {
 
     /**
      * Initializes the controller class.

@@ -15,18 +15,8 @@ import javafx.scene.control.Button;
  *
  * @author sohail.alam
  */
-public class AdminHomeController extends CommonEventHandlers implements Initializable {
+public class AdminHomeController implements Initializable {
 
-    @FXML
-    private Button btn_adminHome;
-    @FXML
-    private Button btn_adminManageUsers;
-    @FXML
-    private Button btn_adminManageQuiz;
-    @FXML
-    private Button btn_adminViewQuiz;
-    @FXML
-    private Button btn_adminViewScores;
 
     /**
      * Initializes the controller class.

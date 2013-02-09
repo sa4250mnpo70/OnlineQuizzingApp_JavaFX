@@ -11,9 +11,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author SOHAIL
+ * @author sohail.alam
  */
-public class AdminManageUsersController implements Initializable {
+public class _AppFooterController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -21,5 +21,5 @@ public class AdminManageUsersController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
+    }    
 }
