@@ -13,8 +13,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -83,8 +85,21 @@ public class _AppHeaderController implements Initializable {
      * @param event
      */
     synchronized public void handleAppMouseClick_Hold(MouseEvent event) {
+        
+        Stage stage = OnlineQuizzingApp.getInstance().getStage();
+        
         xOffset = event.getSceneX();
         yOffset = event.getSceneY();
+        
+        if(event.getButton().equals(MouseButton.PRIMARY)){
+            if(event.getClickCount() == 2){
+                if (stage.isFullScreen()) {
+                    stage.setFullScreen(false);
+                } else {
+                    stage.setFullScreen(true);
+                }
+            }
+        }
     }
 
     /**
