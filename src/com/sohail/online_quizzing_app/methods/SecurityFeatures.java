@@ -70,13 +70,13 @@ public class SecurityFeatures {
                     cip = Cipher.getInstance("AES");
                     cip.init(Cipher.ENCRYPT_MODE, secSpec);
                     encrypted = cip.doFinal(DATA.getBytes());
-                    
+
                     /* TEST */
                     String new_key = new String(raw);
                     System.out.println("KEY: " + new_key);
-                    
-                    
-                    
+
+
+
                     break;
                 default:
                     throw new AssertionError();

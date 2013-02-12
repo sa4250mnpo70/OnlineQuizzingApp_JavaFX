@@ -16,10 +16,10 @@ import java.util.HashMap;
 public class DBTest {
 
     public static void main(String[] args) {
-        
+
         //Test 0
         BootStrap.getInstance().Initialize();
-        
+
         //Test 1
         DBConnection dbConnection = new DBConnection("localhost", "root", "dB@123", "OnlineQuizzingApp");
         DBQuery dbQuery = new DBQuery();
@@ -39,9 +39,9 @@ public class DBTest {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        
+
         HashMap<String, String> valuesMap = new HashMap<>();
-        
+
         valuesMap.put("username", "SohailUsername3");
         valuesMap.put("password", "SohailPassword3");
         valuesMap.put("first_name", "Sohail");
@@ -54,18 +54,18 @@ public class DBTest {
         valuesMap.put("address", "");
         valuesMap.put("dob", "1990-10-10");
         valuesMap.put("date_of_joining", "2013-02-11");
-        
+
         DBUsers users = new DBUsers();
-        
+
         //TEST 2
         //users.CreateUser(valuesMap);
-        
+
         //TEST 2
         //users.CreateStudent("712676dd-2f9c-4e50-af80-5185f985afae", "Electronics", "460/08");
-        
+
         //TEST 3
         //users.CreateAdmin("f09fae47-b662-458d-87ef-44bd3b5a62f5");
-        
+
         //TEST 4
         System.out.println("VALIDATE USER: " + users.ValidateUser("SohailUsername2", "SohailPassword2"));
     }

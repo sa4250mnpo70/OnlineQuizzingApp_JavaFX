@@ -85,14 +85,14 @@ public class _AppHeaderController implements Initializable {
      * @param event
      */
     synchronized public void handleAppMouseClick_Hold(MouseEvent event) {
-        
+
         Stage stage = OnlineQuizzingApp.getInstance().getStage();
-        
+
         xOffset = event.getSceneX();
         yOffset = event.getSceneY();
-        
-        if(event.getButton().equals(MouseButton.PRIMARY)){
-            if(event.getClickCount() == 2){
+
+        if (event.getButton().equals(MouseButton.PRIMARY)) {
+            if (event.getClickCount() == 2) {
                 if (stage.isFullScreen()) {
                     stage.setFullScreen(false);
                 } else {
@@ -150,7 +150,7 @@ public class _AppHeaderController implements Initializable {
                 case AllScenesInterface.ADMIN_ADD_NEW_QUIZ_FXML:
                     txt_headerTitle.setText("ADMIN: Add New Quiz");
                     break;
-                 case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
+                case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
                     txt_headerTitle.setText("ADMIN: Add New Question");
                     break;
                 case AllScenesInterface.ADMIN_HOME_FXML:

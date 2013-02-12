@@ -30,7 +30,7 @@ public class _AppAdminSideBarController implements Initializable {
     private Button btn_adminViewQuiz;
     @FXML
     private Button btn_adminViewScores;
-    
+
     //*********** All Events Common To ADMIN Section
     /*
      * Show the Admin Home Scene
@@ -76,7 +76,7 @@ public class _AppAdminSideBarController implements Initializable {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminViewScores(OnlineQuizzingApp.getInstance().getStage());
     }
-        
+
     /**
      * Initializes the controller class.
      */
@@ -84,5 +84,5 @@ public class _AppAdminSideBarController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         OnlineQuizzingApp.getInstance().getStage().getTitle();
-    }    
+    }
 }

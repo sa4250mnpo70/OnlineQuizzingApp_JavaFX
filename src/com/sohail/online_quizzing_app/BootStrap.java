@@ -17,25 +17,24 @@ import java.util.logging.Logger;
  * @author SOHAIL
  */
 public class BootStrap {
+
     private static BootStrap instance = new BootStrap();
-    
-    public static BootStrap getInstance(){
+
+    public static BootStrap getInstance() {
         return instance;
     }
-
     private Properties DBProperties = new Properties();
-    
-    private BootStrap(){
-        
+
+    private BootStrap() {
     }
-    
+
     public void Initialize() {
         //Load the properties file
         File DBPropertiesFile = new File("./resources/DBDetails.properties");
         FileInputStream DBPropertiesFileIS;
         try {
             DBPropertiesFileIS = new FileInputStream(DBPropertiesFile);
-        this.DBProperties.load(DBPropertiesFileIS);
+            this.DBProperties.load(DBPropertiesFileIS);
         } catch (FileNotFoundException ex) {
         } catch (IOException ex) {
         }
@@ -47,5 +46,4 @@ public class BootStrap {
     public Properties getDBProperties() {
         return DBProperties;
     }
-    
 }

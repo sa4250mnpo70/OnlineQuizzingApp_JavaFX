@@ -9,6 +9,4 @@ package com.sohail.online_quizzing_app.controller;
  * @author sohail.alam
  */
 public class CommonEventHandlers {
-    
-    
 }

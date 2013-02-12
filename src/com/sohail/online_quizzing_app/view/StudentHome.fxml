@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AdminAddNewQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentHomeController">
+    <bottom>
+        <fx:include source="_AppFooter.fxml" />
+    </bottom>
+    <left>
+        <fx:include source="_AppAdminSideBar.fxml" />
+    </left>
+    <stylesheets>
+        <URL value="@styles/AdminAddNewQuiz.css" />
+    </stylesheets>
+    <top>
+        <fx:include source="_AppHeader.fxml" />
+    </top>
+</BorderPane>

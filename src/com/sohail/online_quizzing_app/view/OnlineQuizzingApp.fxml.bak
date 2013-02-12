@@ -9,202 +9,202 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.OnlineQuizzingAppController">
-  <bottom>
-    <fx:include source="_AppFooter.fxml" />
-  </bottom>
-  <center>
-    <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-      <expandedPane>
-        <TitledPane id="" fx:id="x2" animated="false" text="User Login">
-          <content>
-            <AnchorPane id="" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <children>
-                <GridPane layoutX="0.0" layoutY="1.0" prefHeight="250.0" prefWidth="400.0">
-                  <children>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-                      <children>
-                        <Text fx:id="txt_loginMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Type in your Username and Password below" />
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                      <children>
-                        <Label text="Username:" />
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                      <children>
-                        <Label text="Password:" />
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                      <children>
-                        <TextField fx:id="txtbox_loginUsername" prefHeight="35.0" prefWidth="250.0" promptText="Your Username">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </TextField>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                      <children>
-                        <PasswordField fx:id="txtbox_loginPassword" alignment="CENTER_LEFT" disable="false" prefHeight="35.0" prefWidth="250.0" promptText="Your Password">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </PasswordField>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                      <children>
-                        <Button fx:id="btn_login" cancelButton="false" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="45.0" prefWidth="250.0" text="Login">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                    </HBox>
-                  </children>
-                  <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="128.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                </GridPane>
-              </children>
-            </AnchorPane>
-          </content>
-        </TitledPane>
-      </expandedPane>
-      <panes>
-        <fx:reference source="x2" />
-        <TitledPane animated="false" text="New User Signup">
-          <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <children>
-                <GridPane layoutX="0.0" layoutY="0.0" prefHeight="250.0" prefWidth="400.0">
-                  <children>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-                      <children>
-                        <Text fx:id="txt_signupMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the form to Signup" />
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="120.0001220703125" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                      <children>
-                        <Label alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="35.0" prefWidth="200.0" text="Username:">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
-                      <children>
-                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Password:">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
-                      <children>
-                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Repeat Password:">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" disable="false" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                      <children>
-                        <TextField fx:id="txtbox_signupUsername" disable="true" editable="true" onKeyReleased="#handleSignupUsernameKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Something Unique">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </TextField>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                      <children>
-                        <PasswordField fx:id="txtbox_signupPassword" disable="true" editable="true" onKeyReleased="#handleSignupPasswordKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Your Secret Password" />
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                      <children>
-                        <PasswordField fx:id="txtbox_signupPassword2" disable="true" editable="true" onKeyReleased="#handleSignupPassword2KeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Repeat Your Secret Password">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </PasswordField>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" disable="false" prefHeight="100.0" prefWidth="200.0" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                      <children>
-                        <Button fx:id="btn_signup" defaultButton="true" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Signup">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                      <children>
-                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Email:">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                      <children>
-                        <TextField fx:id="txtbox_signupEmail" onKeyReleased="#handleSignupEmailKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="name@domain.com">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </TextField>
-                      </children>
-                    </HBox>
-                  </children>
-                  <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="120.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="280.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                </GridPane>
-              </children>
-            </AnchorPane>
-          </content>
-        </TitledPane>
-      </panes>
-      <BorderPane.margin>
-        <Insets bottom="125.0" top="50.0" />
-      </BorderPane.margin>
-    </Accordion>
-  </center>
-  <left>
-    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-  </left>
-  <right>
-    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-  </right>
-  <stylesheets>
-    <URL value="@styles/CommonStyles.css" />
-    <URL value="@styles/OnlineQuizzingApp.css" />
-  </stylesheets>
-  <top>
-    <fx:include source="_AppHeader.fxml" />
-  </top>
+    <bottom>
+        <fx:include source="_AppFooter.fxml" />
+    </bottom>
+    <center>
+        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <expandedPane>
+                <TitledPane id="" fx:id="x2" animated="false" text="User Login">
+                    <content>
+                        <AnchorPane id="" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="0.0" layoutY="1.0" prefHeight="250.0" prefWidth="400.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                                            <children>
+                                                <Text fx:id="txt_loginMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Type in your Username and Password below" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                            <children>
+                                                <Label text="Username:" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                            <children>
+                                                <Label text="Password:" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <children>
+                                                <TextField fx:id="txtbox_loginUsername" prefHeight="35.0" prefWidth="250.0" promptText="Your Username">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <children>
+                                                <PasswordField fx:id="txtbox_loginPassword" alignment="CENTER_LEFT" disable="false" prefHeight="35.0" prefWidth="250.0" promptText="Your Password">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </PasswordField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <children>
+                                                <Button fx:id="btn_login" cancelButton="false" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="45.0" prefWidth="250.0" text="Login">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="128.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </expandedPane>
+            <panes>
+                <fx:reference source="x2" />
+                <TitledPane animated="false" text="New User Signup">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="0.0" layoutY="0.0" prefHeight="250.0" prefWidth="400.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                                            <children>
+                                                <Text fx:id="txt_signupMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the form to Signup" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="120.0001220703125" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="35.0" prefWidth="200.0" text="Username:">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Password:">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Repeat Password:">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" disable="false" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <children>
+                                                <TextField fx:id="txtbox_signupUsername" disable="true" editable="true" onKeyReleased="#handleSignupUsernameKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Something Unique">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <children>
+                                                <PasswordField fx:id="txtbox_signupPassword" disable="true" editable="true" onKeyReleased="#handleSignupPasswordKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Your Secret Password" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <children>
+                                                <PasswordField fx:id="txtbox_signupPassword2" disable="true" editable="true" onKeyReleased="#handleSignupPassword2KeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="Repeat Your Secret Password">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </PasswordField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" disable="false" prefHeight="100.0" prefWidth="200.0" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                            <children>
+                                                <Button fx:id="btn_signup" defaultButton="true" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Signup">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" text="Email:">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <children>
+                                                <TextField fx:id="txtbox_signupEmail" onKeyReleased="#handleSignupEmailKeyEvent" prefHeight="35.0" prefWidth="250.0" promptText="name@domain.com">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="280.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+            <BorderPane.margin>
+                <Insets bottom="125.0" top="50.0" />
+            </BorderPane.margin>
+        </Accordion>
+    </center>
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+    </left>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+    </right>
+    <stylesheets>
+        <URL value="@styles/CommonStyles.css" />
+        <URL value="@styles/OnlineQuizzingApp.css" />
+    </stylesheets>
+    <top>
+        <fx:include source="_AppHeader.fxml" />
+    </top>
 </BorderPane>

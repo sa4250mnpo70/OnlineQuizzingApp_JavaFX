@@ -95,7 +95,7 @@ public class SceneLoaders implements AllScenesInterface {
             e.printStackTrace();
         }
     }
-    
+
     /*
      * Admin Add New Quiz
      */
@@ -106,7 +106,7 @@ public class SceneLoaders implements AllScenesInterface {
             e.printStackTrace();
         }
     }
-    
+
     /*
      * Admin Add Question & Option
      */

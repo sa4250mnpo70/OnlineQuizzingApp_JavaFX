@@ -19,7 +19,6 @@ public interface AllScenesInterface {
     public static final String ADMIN_VIEW_QUIZ_FXML = "view/AdminViewQuiz.fxml";
     public static final String ADMIN_VIEW_SCORES_FXML = "view/AdminViewScores.fxml";
     public static final String ONLINE_QUIZZING_APP_FXML = "view/OnlineQuizzingApp.fxml";
-    
     //Stylesheet Source
     public static final String ADMIN_ADD_NEW_QUIZ_CSS = "view/styles/AdminAddNewQuiz.css";
     public static final String ADMIN_ADD_QUESTION_CSS = "view/styles/AdminAddQuestion.css";

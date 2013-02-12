@@ -12,9 +12,10 @@ import java.util.logging.Logger;
  * @author SOHAIL
  */
 public class TestSecurity {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         SecurityFeatures security = new SecurityFeatures();
-        
+
         byte[] encrypted = null;
         try {
             encrypted = security.Encrypt("AES", "Hello World!", null);

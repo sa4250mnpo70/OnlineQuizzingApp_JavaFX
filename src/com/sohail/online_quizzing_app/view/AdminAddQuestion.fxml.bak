@@ -9,616 +9,83 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddQuestionController">
-  <bottom>
-    <fx:include source="_AppFooter.fxml" />
-  </bottom>
-  <center>
-    <Accordion>
-      <expandedPane>
-        <TitledPane id="btn_adminSelectO4Image" fx:id="btn_adminSelectO4Image_x0" animated="false" text="Add Option 4">
-          <content>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-              <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Type in your option:" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <TextArea fx:id="txtfield_adminO4" prefWidth="200.0" promptText="Type in your option here." wrapText="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </TextArea>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO4" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminClearO4" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO4" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                  <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </HBox.margin>
+<BorderPane id="AdminAddQuestion" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddQuestionController">
+    <bottom>
+        <fx:include source="_AppFooter.fxml" />
+    </bottom>
+    <center>
+        <GridPane BorderPane.margin="$x1">
+            <children>
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.rowSpan="7" GridPane.vgrow="SOMETIMES">
+                    <children>
+                        <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0" VBox.margin="$x1" VBox.vgrow="SOMETIMES">
+                            <children>
+                                <Label text="Type Your Question Below : " VBox.vgrow="SOMETIMES">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                                    </VBox.margin>
+                                </Label>
+                                <TextArea prefWidth="-1.0" promptText="This is a sample question." wrapText="true" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+                            </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="-1.0" text="Click Me To Select an Image for the Question (Optional) " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
+                            <children>
+                                <ComboBox prefHeight="30.0" prefWidth="320.0" promptText="Select Difficulty Level for this question " HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Item 1" />
+                                            <String fx:value="Item 2" />
+                                            <String fx:value="Item 3" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Cancel" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Clear" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Save" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                            </children>
+                        </HBox>
+                    </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Select an Image (Optional) :" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <ImageView fx:id="image_adminO4" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </ImageView>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO4Image" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSelectO4Image" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO4Image" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                </VBox>
-              </children>
-            </HBox>
-          </content>
-        </TitledPane>
-      </expandedPane>
-      <panes>
-        <TitledPane animated="false" text="Add Question">
-          <content>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-              <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Type in your question: " HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <TextArea fx:id="txtfield_adminQ" prefWidth="200.0" promptText="Type in your question here." wrapText="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </TextArea>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button id="btn_adminCanc" fx:id="btn_adminCancelQ" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminClearQ" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveQ" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                  <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </HBox.margin>
-                </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Select an Image (Optional) :" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <ImageView fx:id="image_adminQ" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </ImageView>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelQImage" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSelectQImage" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveQImage" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                </VBox>
-              </children>
-            </HBox>
-          </content>
-        </TitledPane>
-        <TitledPane animated="false" text="Add Option 1">
-          <content>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-              <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Type in your option:" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <TextArea fx:id="txtfield_adminO1" prefWidth="200.0" promptText="Type in your option here." wrapText="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </TextArea>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO1" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminClearO1" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO1" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                  <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </HBox.margin>
-                </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Select an Image (Optional) :" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <ImageView fx:id="image_adminO1" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </ImageView>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO1Image" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSelectO1Image" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO1Image" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                </VBox>
-              </children>
-            </HBox>
-          </content>
-        </TitledPane>
-        <TitledPane animated="false" text="Add Option 2">
-          <content>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-              <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Type in your option:" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <TextArea fx:id="txtfield_adminO2" prefWidth="200.0" promptText="Type in your option here." wrapText="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </TextArea>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO2" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button id="btn_adminClearO1" fx:id="btn_adminClearO2" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO2" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                  <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </HBox.margin>
-                </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Select an Image (Optional) :" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <ImageView fx:id="image_adminO2" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </ImageView>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO2Image" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSelectO2Image" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO2Image" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                </VBox>
-              </children>
-            </HBox>
-          </content>
-        </TitledPane>
-        <TitledPane animated="false" text="Add Option 3">
-          <content>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-              <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Type in your option:" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <TextArea fx:id="txtfield_adminO3" prefWidth="200.0" promptText="Type in your option here." wrapText="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </TextArea>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO3" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminClearO3" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO3" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                  <HBox.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </HBox.margin>
-                </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="SOMETIMES">
-                  <children>
-                    <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="200.0">
-                      <children>
-                        <Label text="Select an Image (Optional) :" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Label>
-                      </children>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <ImageView fx:id="image_adminO3" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets />
-                          </HBox.margin>
-                        </ImageView>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                      <children>
-                        <Button fx:id="btn_adminCancelO3Image" cancelButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Cancel" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSelectO3Image" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                        <Button fx:id="btn_adminSaveO3Image" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Save" HBox.hgrow="SOMETIMES">
-                          <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                          </HBox.margin>
-                        </Button>
-                      </children>
-                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                      </VBox.margin>
-                    </HBox>
-                  </children>
-                </VBox>
-              </children>
-            </HBox>
-          </content>
-        </TitledPane>
-        <fx:reference source="btn_adminSelectO4Image_x0" />
-      </panes>
-      <BorderPane.margin>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-      </BorderPane.margin>
-    </Accordion>
-  </center>
-  <left>
-    <fx:include source="_AppAdminSideBar.fxml" />
-  </left>
-  <right>
-    <VBox alignment="CENTER" prefHeight="475.0" prefWidth="150.0">
-      <children>
-        <Label text="Total Questions Added :" VBox.vgrow="SOMETIMES">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Label>
-        <TextField id="txtbox_adminAddQuestionTotalQuestionAddedd" fx:id="txtbox_adminTotalQAdded" editable="false" prefHeight="30.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </TextField>
-        <Label text="Select Question Number: " VBox.vgrow="SOMETIMES">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Label>
-        <ComboBox fx:id="combo_adminSelectQNo" mouseTransparent="false" prefHeight="30.0" prefWidth="200.0" promptText="Click Me" VBox.vgrow="SOMETIMES">
-          <items>
-            <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Item 1" />
-              <String fx:value="Item 2" />
-              <String fx:value="Item 3" />
-            </FXCollections>
-          </items>
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </ComboBox>
-        <Button fx:id="btn_adminDeleteQ" cancelButton="true" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Delete Question">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
-          </VBox.margin>
-        </Button>
-        <Button fx:id="btn_adminPreviousQ" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Previous Question">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Button>
-        <Button id="btn_adminManageQuiz" fx:id="btn_adminNextQ" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Next Question">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Button>
-        <Button id="btn_adminViewQuiz" fx:id="btn_adminUpdateQ" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Update Question">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Button>
-        <Button id="btn_adminUpdateQ" fx:id="btn_adminPublishQuiz" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Publish Quiz" VBox.vgrow="SOMETIMES">
-          <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-          </VBox.margin>
-        </Button>
-      </children>
-      <BorderPane.margin>
-        <Insets />
-      </BorderPane.margin>
-    </VBox>
-  </right>
-  <stylesheets>
-    <URL value="@styles/AdminAddQuestion.css" />
-    <URL value="@styles/OnlineQuizzingApp.css" />
-  </stylesheets>
-  <top>
-    <fx:include source="_AppHeader.fxml" />
-  </top>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </center>
+    <left>
+        <fx:include source="_AppAdminSideBar.fxml" />
+    </left>
+    <right>
+        <fx:include source="_AdminQuizRightSidebar.fxml" />
+    </right>
+    <stylesheets>
+        <URL value="@styles/AdminAddQuestion.css" />
+    </stylesheets>
+    <top>
+        <fx:include source="_AppHeader.fxml" />
+    </top>
 </BorderPane>

@@ -18,7 +18,7 @@ import javafx.scene.text.Text;
  * @author sohail.alam
  */
 public class FXDialogBoxController implements Initializable {
-    
+
     @FXML
     private Text txt_dialogHeader;
     @FXML
@@ -31,9 +31,9 @@ public class FXDialogBoxController implements Initializable {
     private Button btn_dialogDecline;
     @FXML
     private Button btn_dialogCancel;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 }

@@ -26,7 +26,7 @@ public class AdminManageQuizController implements Initializable {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminAddNewQuiz(OnlineQuizzingApp.getInstance().getStage());
     }
-    
+
     /**
      * Initializes the controller class.
      */

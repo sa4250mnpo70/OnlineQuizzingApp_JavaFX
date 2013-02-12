@@ -9,5 +9,4 @@ package com.sohail.online_quizzing_app.model;
  * @author SOHAIL
  */
 public class DBQuiz {
-    
 }

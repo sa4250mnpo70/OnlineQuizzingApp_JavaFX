@@ -8,34 +8,34 @@
 <?import javafx.scene.layout.*?>
 
 <VBox id="_AppAdminSideBar" alignment="CENTER" prefHeight="475.0" prefWidth="150.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller._AppAdminSideBarController">
-  <children>
-    <Button fx:id="btn_adminHome" disable="false" mnemonicParsing="false" onAction="#handleAdminHomeButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
-      <VBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </VBox.margin>
-    </Button>
-    <Button fx:id="btn_adminManageUsers" disable="false" mnemonicParsing="false" onAction="#handleAdminManageUsersButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
-      <VBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </VBox.margin>
-    </Button>
-    <Button fx:id="btn_adminManageQuiz" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz" visible="true">
-      <VBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </VBox.margin>
-    </Button>
-    <Button fx:id="btn_adminViewQuiz" mnemonicParsing="false" onAction="#handleAdminViewQuizButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
-      <VBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </VBox.margin>
-    </Button>
-    <Button fx:id="btn_adminViewScores" mnemonicParsing="false" onAction="#handleAdminViewScoresButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Scores">
-      <VBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </VBox.margin>
-    </Button>
-  </children>
-  <stylesheets>
-    <URL value="@styles/_AppAdminSidebar.css" />
-  </stylesheets>
+    <children>
+        <Button fx:id="btn_adminHome" disable="false" mnemonicParsing="false" onAction="#handleAdminHomeButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Admin Home">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+        <Button fx:id="btn_adminManageUsers" disable="false" mnemonicParsing="false" onAction="#handleAdminManageUsersButtonEvent" prefHeight="40.0" prefWidth="140.0" text="Manage Users">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+        <Button fx:id="btn_adminManageQuiz" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Manage Quiz" visible="true">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+        <Button fx:id="btn_adminViewQuiz" mnemonicParsing="false" onAction="#handleAdminViewQuizButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Quiz">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+        <Button fx:id="btn_adminViewScores" mnemonicParsing="false" onAction="#handleAdminViewScoresButtonEvent" prefHeight="40.0" prefWidth="140.0" text="View Scores">
+            <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@styles/_AppAdminSidebar.css" />
+    </stylesheets>
 </VBox>

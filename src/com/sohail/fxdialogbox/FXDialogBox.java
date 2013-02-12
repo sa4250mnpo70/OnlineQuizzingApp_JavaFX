@@ -16,13 +16,13 @@ import javafx.stage.StageStyle;
  * @author sohail.alam
  */
 public class FXDialogBox extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXDialogBox.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();

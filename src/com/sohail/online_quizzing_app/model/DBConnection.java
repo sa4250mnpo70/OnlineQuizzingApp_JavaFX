@@ -23,18 +23,18 @@ public class DBConnection {
 
     public DBConnection() {
     }
-    
-    public DBConnection(String db_url, String db_username, String db_password,String database_name){
+
+    public DBConnection(String db_url, String db_username, String db_password, String database_name) {
         DBConnection.db_url = db_url;
         DBConnection.db_username = db_username;
         DBConnection.db_password = db_password;
         DBConnection.database_name = database_name;
     }
-    
-    public Connection DBConnect() throws Exception{
+
+    public Connection DBConnect() throws Exception {
         return DBConnect(db_url, db_username, db_password, database_name);
     }
-    
+
     public Connection DBConnect(String DB_URL, String DB_USERNAME, String DB_PASSWORD, String str_databaseName) throws Exception {
 
         String DatabaseURL = null;
