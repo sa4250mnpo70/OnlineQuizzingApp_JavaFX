@@ -18,16 +18,18 @@ public class QuestionStructure {
 
     @ElementList(required = true, empty = false, inline = true, type = OptionStructure.class)
     private ArrayList<OptionStructure> optionList;
-    @Attribute(name = "number", required = true)
-    private int number;
+    @Attribute(name = "question_number", required = true)
+    private int question_number;
     @Attribute(name = "difficulty", required = true)
-    private int difficulty;
-    @Attribute(name = "text", required = true)
-    private String text;
-    @Attribute(name = "image", required = false)
-    private byte[] image;
+    private String difficulty;
+    @Attribute(name = "question", required = true)
+    private String question;
+    @Attribute(name = "question_image", required = false)
+    private byte[] question_image;
     @Attribute(name = "uuid", required = true)
     private String uuid;
+    @Attribute(name = "uuid_quiz", required = true)
+    private String uuid_quiz;
 
     /**
      *
@@ -38,54 +40,58 @@ public class QuestionStructure {
 
     /**
      *
-     * @param number
+     * @param question_number 
      * @param difficulty
-     * @param text
+     * @param question
      * @param uuid
+     * @param uuid_quiz  
      */
-    public QuestionStructure(int number, int difficulty, String text, String uuid) {
+    public QuestionStructure(int question_number, String difficulty, String question, String uuid, String uuid_quiz) {
 
-        this.number = number;
+        this.question_number = question_number;
         this.difficulty = difficulty;
-        this.text = text;
+        this.question = question;
         this.uuid = uuid;
+        this.uuid_quiz = uuid_quiz;
     }
 
     /**
      *
      * @param optionList
-     * @param number
+     * @param question_number 
      * @param difficulty
-     * @param text
+     * @param question
      * @param uuid
+     * @param uuid_quiz  
      */
     public QuestionStructure(ArrayList<OptionStructure> optionList,
-            int number, int difficulty, String text, String uuid) {
+            int question_number, String difficulty, String question, String uuid, String uuid_quiz) {
 
         this.optionList = optionList;
-        this.number = number;
+        this.question_number = question_number;
         this.difficulty = difficulty;
-        this.text = text;
+        this.question = question;
         this.uuid = uuid;
+        this.uuid_quiz = uuid_quiz;
     }
 
     /**
      *
      * @param optionList
-     * @param number
+     * @param question_number 
      * @param uuid
      * @param difficulty
-     * @param text
+     * @param question
      * @param image
      */
     public QuestionStructure(ArrayList<OptionStructure> optionList,
-            int number, int difficulty, String text, byte[] image, String uuid) {
+            int question_number, String difficulty, String question, byte[] image, String uuid) {
 
         this.optionList = optionList;
-        this.number = number;
+        this.question_number = question_number;
         this.difficulty = difficulty;
-        this.text = text;
-        this.image = image;
+        this.question = question;
+        this.question_image = image;
         this.uuid = uuid;
     }
 
@@ -121,22 +127,22 @@ public class QuestionStructure {
 
     /**
      *
-     * @param number
-     * @param text
+     * @param question_number
+     * @param question
      */
-    public void addToOptionList(int number, String text, String uuid) {
-        this.optionList.add(new OptionStructure(number, text, uuid));
+    public void addToOptionList(int question_number, String question, String uuid) {
+        this.optionList.add(new OptionStructure(question_number, question, uuid));
     }
 
     /**
      *
-     * @param number
+     * @param question_number
      * @param uuid
-     * @param text
+     * @param question
      * @param image
      */
-    public void addToOptionList(int number, String text, byte[] image, String uuid) {
-        this.optionList.add(new OptionStructure(number, text, image, uuid));
+    public void addToOptionList(int question_number, String question, byte[] image, String uuid) {
+        this.optionList.add(new OptionStructure(question_number, question, image, uuid));
     }
 
     /**
@@ -147,17 +153,17 @@ public class QuestionStructure {
     }
 
     /**
-     * @return the number
+     * @return the question_number
      */
-    public int getNumber() {
-        return number;
+    public int getQuestionNumber() {
+        return question_number;
     }
 
     /**
-     * @param number the number to set
+     * @param question_number 
      */
-    public void setNumber(int number) {
-        this.number = number;
+    public void setQuestionNumber(int question_number) {
+        this.question_number = question_number;
     }
 
     /**
@@ -177,42 +183,56 @@ public class QuestionStructure {
     /**
      * @return the difficulty
      */
-    public int getDifficulty() {
+    public String getDifficulty() {
         return difficulty;
     }
 
     /**
      * @param difficulty the difficulty to set
      */
-    public void setDifficulty(int difficulty) {
+    public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
     }
 
     /**
-     * @return the text
+     * @return the question
      */
-    public String getText() {
-        return text;
+    public String getQuestion() {
+        return question;
     }
 
     /**
-     * @param text the text to set
+     * @param question the question to set
      */
-    public void setText(String text) {
-        this.text = text;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     /**
      * @return the image
      */
     public byte[] getImage() {
-        return image;
+        return question_image;
     }
 
     /**
      * @param image the image to set
      */
     public void setImage(byte[] image) {
-        this.image = image;
+        this.question_image = image;
+    }
+
+    /**
+     * @return the uuid_quiz
+     */
+    public String getUuid_quiz() {
+        return uuid_quiz;
+    }
+
+    /**
+     * @param uuid_quiz the uuid_quiz to set
+     */
+    public void setUuid_quiz(String uuid_quiz) {
+        this.uuid_quiz = uuid_quiz;
     }
 }

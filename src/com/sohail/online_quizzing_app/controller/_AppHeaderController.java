@@ -51,7 +51,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppAboutButtonEvent(ActionEvent event) {
+    public void handleAppAboutButtonEvent(ActionEvent event) {
         //
     }
 
@@ -59,7 +59,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppHelpButtonEvent(ActionEvent event) {
+    public void handleAppHelpButtonEvent(ActionEvent event) {
         //
     }
 
@@ -67,7 +67,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppExitButtonAction(ActionEvent event) {
+    public void handleAppExitButtonAction(ActionEvent event) {
         System.exit(0);
     }
 
@@ -75,7 +75,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppLogoutButtonAction(ActionEvent event) {
+    public void handleAppLogoutButtonAction(ActionEvent event) {
         //
     }
 
@@ -84,7 +84,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppMouseClick_Hold(MouseEvent event) {
+    public void handleAppMouseClick_Hold(MouseEvent event) {
 
         Stage stage = OnlineQuizzingApp.getInstance().getStage();
 
@@ -107,7 +107,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppMouseDrag(MouseEvent event) {
+    public void handleAppMouseDrag(MouseEvent event) {
         if (!OnlineQuizzingApp.getInstance().getStage().isFullScreen()) {
             OnlineQuizzingApp.getInstance().getStage().setX(event.getScreenX() - xOffset);
             OnlineQuizzingApp.getInstance().getStage().setY(event.getScreenY() - yOffset);
@@ -119,7 +119,7 @@ public class _AppHeaderController implements Initializable {
      *
      * @param event
      */
-    synchronized public void handleAppToggleFullScreenButtonAction(ActionEvent event) {
+    public void handleAppToggleFullScreenButtonAction(ActionEvent event) {
         if (OnlineQuizzingApp.getInstance().getStage().isFullScreen()) {
             OnlineQuizzingApp.getInstance().getStage().setFullScreen(false);
         } else {
@@ -150,6 +150,9 @@ public class _AppHeaderController implements Initializable {
                 case AllScenesInterface.ADMIN_ADD_NEW_QUIZ_FXML:
                     txt_headerTitle.setText("ADMIN: Add New Quiz");
                     break;
+                case AllScenesInterface.ADMIN_ADD_OPTION_FXML:
+                    txt_headerTitle.setText("ADMIN: Add New Option");
+                    break;
                 case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
                     txt_headerTitle.setText("ADMIN: Add New Question");
                     break;
@@ -172,7 +175,8 @@ public class _AppHeaderController implements Initializable {
                     txt_headerTitle.setText("Welcome To Online Quizzing App!!");
                     break;
                 default:
-                    throw new AssertionError();
+                    txt_headerTitle.setText("");
+                    break;
             }
         } catch (Exception e) {
         }

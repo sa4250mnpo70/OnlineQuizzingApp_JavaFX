@@ -27,14 +27,14 @@ public class Testing {
         optionsList.add(option1);
         optionsList.add(option2);
 
-        QuestionStructure question1 = new QuestionStructure(optionsList, 1, 5, "This is question 1", String.valueOf(UUID.randomUUID()));
-        QuestionStructure question2 = new QuestionStructure(optionsList, 2, 1, "This is question 2", String.valueOf(UUID.randomUUID()));
+        QuestionStructure question1 = new QuestionStructure(optionsList, 1, "Kid's Level", "This is question 1", UUID.randomUUID().toString(), UUID.randomUUID().toString());
+        QuestionStructure question2 = new QuestionStructure(optionsList, 2, "Mind Boggling!", "This is question 2", UUID.randomUUID().toString(), UUID.randomUUID().toString());
 
         ArrayList<QuestionStructure> questionList = new ArrayList<QuestionStructure>();
         questionList.add(question1);
         questionList.add(question2);
 
-        QuestionBankStructure quiz = new QuestionBankStructure(questionList, "Test", "Test1", "timeLimit", "duedate", "description", "totalQ", "solveQ", String.valueOf(UUID.randomUUID()));
+        QuizStructure quiz = new QuizStructure(questionList, "Test", "Test1", "timeLimit", "duedate", "description", "totalQ", "solveQ", String.valueOf(UUID.randomUUID()));
 
         Serializer serialize = new Persister();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

@@ -15,7 +15,7 @@ import org.simpleframework.xml.Root;
  * @author sohail.alam
  */
 @Root(name = "Quiz")
-public class QuestionBankStructure implements Serializable {
+public class QuizStructure implements Serializable {
 
     private static final long serialVersionUID = 3443757615530896340L;
     @ElementList(required = false, empty = false, inline = true, type = QuestionStructure.class)
@@ -32,8 +32,8 @@ public class QuestionBankStructure implements Serializable {
     private String due_date;
     @Attribute(name = "description", required = false)
     private String description;
-    @Attribute(name = "total_questions_in_quiz", required = true)
-    private String total_questions_in_quiz;
+    @Attribute(name = "total_questions", required = true)
+    private String total_questions;
     @Attribute(name = "total_questions_to_solve", required = true)
     private String total_questions_to_solve;
     @Attribute(name = "uuid", required = true)
@@ -42,7 +42,7 @@ public class QuestionBankStructure implements Serializable {
     /**
      *
      */
-    public QuestionBankStructure() {
+    public QuizStructure() {
         question = new ArrayList<QuestionStructure>();
     }
 
@@ -58,7 +58,7 @@ public class QuestionBankStructure implements Serializable {
      * @param total_questions_to_solve
      * @param uuid
      */
-    public QuestionBankStructure(ArrayList<QuestionStructure> question,
+    public QuizStructure(ArrayList<QuestionStructure> question,
             String subject, String topic, String timeLimit, String due_date, String description, String total_questions_in_quiz, String total_questions_to_solve, String uuid) {
         this.question = question;
         this.subject = subject;
@@ -66,7 +66,7 @@ public class QuestionBankStructure implements Serializable {
         this.time_limit = timeLimit;
         this.due_date = due_date;
         this.description = description;
-        this.total_questions_in_quiz = total_questions_in_quiz;
+        this.total_questions = total_questions_in_quiz;
         this.total_questions_to_solve = total_questions_to_solve;
         this.uuid = uuid;
     }
@@ -232,14 +232,14 @@ public class QuestionBankStructure implements Serializable {
      * @return the total_questions_in_quiz
      */
     public String getTotal_questions_in_quiz() {
-        return total_questions_in_quiz;
+        return total_questions;
     }
 
     /**
      * @param total_questions_in_quiz the total_questions_in_quiz to set
      */
     public void setTotal_questions_in_quiz(String total_questions_in_quiz) {
-        this.total_questions_in_quiz = total_questions_in_quiz;
+        this.total_questions = total_questions_in_quiz;
     }
 
     /**

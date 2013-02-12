@@ -4,6 +4,8 @@
  */
 package com.sohail.online_quizzing_app;
 
+import static com.sohail.online_quizzing_app.AllScenesInterface.ADMIN_ADD_QUESTION_CSS;
+import static com.sohail.online_quizzing_app.AllScenesInterface.ADMIN_ADD_QUESTION_FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
@@ -32,7 +34,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * This is the Login Scene
      */
-    synchronized public void gotoLogin(Stage stage) {
+    public void gotoLogin(Stage stage) {
         try {
             replaceSceneContent(ONLINE_QUIZZING_APP_FXML, ONLINE_QUIZZING_APP_CSS, stage);
         } catch (Exception ex) {
@@ -44,7 +46,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin Home Scene
      */
-    synchronized public void gotoAdminHome(Stage stage) {
+    public void gotoAdminHome(Stage stage) {
         try {
             replaceSceneContent(ADMIN_HOME_FXML, ADMIN_HOME_CSS, stage);
         } catch (Exception e) {
@@ -55,7 +57,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin User Management Scene
      */
-    synchronized public void gotoAdminManageUsers(Stage stage) {
+    public void gotoAdminManageUsers(Stage stage) {
         try {
             replaceSceneContent(ADMIN_MANAGE_USERS_FXML, ADMIN_MANAGE_USERS_CSS, stage);
         } catch (Exception e) {
@@ -66,7 +68,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin User Management Scene
      */
-    synchronized public void gotoAdminManageQuiz(Stage stage) {
+    public void gotoAdminManageQuiz(Stage stage) {
         try {
             replaceSceneContent(ADMIN_MANAGE_QUIZ_FXML, ADMIN_MANAGE_QUIZ_CSS, stage);
         } catch (Exception e) {
@@ -77,7 +79,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin User Management Scene
      */
-    synchronized public void gotoAdminViewQuiz(Stage stage) {
+    public void gotoAdminViewQuiz(Stage stage) {
         try {
             replaceSceneContent(ADMIN_VIEW_QUIZ_FXML, ADMIN_VIEW_QUIZ_CSS, stage);
         } catch (Exception e) {
@@ -88,7 +90,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin User Management Scene
      */
-    synchronized public void gotoAdminViewScores(Stage stage) {
+    public void gotoAdminViewScores(Stage stage) {
         try {
             replaceSceneContent(ADMIN_VIEW_SCORES_FXML, ADMIN_VIEW_SCORES_CSS, stage);
         } catch (Exception e) {
@@ -99,7 +101,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin Add New Quiz
      */
-    synchronized public void gotoAdminAddNewQuiz(Stage stage) {
+    public void gotoAdminAddNewQuiz(Stage stage) {
         try {
             replaceSceneContent(ADMIN_ADD_NEW_QUIZ_FXML, ADMIN_ADD_NEW_QUIZ_CSS, stage);
         } catch (Exception e) {
@@ -110,9 +112,17 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Admin Add Question & Option
      */
-    synchronized public void gotoAdminAddQuestion(Stage stage) {
+    public void gotoAdminAddQuestion(Stage stage) {
         try {
             replaceSceneContent(ADMIN_ADD_QUESTION_FXML, ADMIN_ADD_QUESTION_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void gotoAdminAddOption(Stage stage) {
+        try {
+            replaceSceneContent(ADMIN_ADD_OPTION_FXML, ADMIN_ADD_OPTION_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,7 +138,7 @@ public class SceneLoaders implements AllScenesInterface {
      * @return
      * @throws Exception
      */
-    synchronized public Parent replaceSceneContent(String fxml, String stylesheet, Stage stage) throws Exception {
+    public Parent replaceSceneContent(String fxml, String stylesheet, Stage stage) throws Exception {
 
         stage.setTitle(fxml);
         Parent page = (Parent) FXMLLoader.load(OnlineQuizzingApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
@@ -148,7 +158,7 @@ public class SceneLoaders implements AllScenesInterface {
     /*
      * Use this method to switch between Full Screen Mode and Normal Screen Mode.
      */
-    synchronized public void doFullScreen(boolean doFullScreen, Stage stage) {
+    public void doFullScreen(boolean doFullScreen, Stage stage) {
         try {
             stage.setFullScreen(doFullScreen);
         } catch (Exception e) {

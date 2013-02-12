@@ -22,7 +22,7 @@ public class AdminManageQuizController implements Initializable {
      * Show the Admin Add Question Scene 
      * @param event 
      */
-    synchronized public void handleAdminAddNewQuizButtonEvent(ActionEvent event) {
+    public void handleAdminAddNewQuizButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminAddNewQuiz(OnlineQuizzingApp.getInstance().getStage());
     }

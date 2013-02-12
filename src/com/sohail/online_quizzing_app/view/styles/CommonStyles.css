@@ -5,7 +5,9 @@
     Description:
         Purpose of the stylesheet follows.
 */
+.mainFxmlClass {
 
+}
 root { 
     display: block;
 }

@@ -36,7 +36,7 @@ public class _AppAdminSideBarController implements Initializable {
      * Show the Admin Home Scene
      * @param event 
      */
-    synchronized public void handleAdminHomeButtonEvent(ActionEvent event) {
+    public void handleAdminHomeButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminHome(OnlineQuizzingApp.getInstance().getStage());
     }
@@ -45,7 +45,7 @@ public class _AppAdminSideBarController implements Initializable {
      * Show the User Management Scene 
      * @param event 
      */
-    synchronized public void handleAdminManageUsersButtonEvent(ActionEvent event) {
+    public void handleAdminManageUsersButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminManageUsers(OnlineQuizzingApp.getInstance().getStage());
     }
@@ -54,7 +54,7 @@ public class _AppAdminSideBarController implements Initializable {
      * Show the Quiz Management Scene 
      * @param event 
      */
-    synchronized public void handleAdminManageQuizButtonEvent(ActionEvent event) {
+    public void handleAdminManageQuizButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminManageQuiz(OnlineQuizzingApp.getInstance().getStage());
     }
@@ -63,7 +63,7 @@ public class _AppAdminSideBarController implements Initializable {
      * Show the Quiz Management Scene 
      * @param event 
      */
-    synchronized public void handleAdminViewQuizButtonEvent(ActionEvent event) {
+    public void handleAdminViewQuizButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminViewQuiz(OnlineQuizzingApp.getInstance().getStage());
     }
@@ -72,7 +72,7 @@ public class _AppAdminSideBarController implements Initializable {
      * Show the Quiz Management Scene 
      * @param event 
      */
-    synchronized public void handleAdminViewScoresButtonEvent(ActionEvent event) {
+    public void handleAdminViewScoresButtonEvent(ActionEvent event) {
         //Load the user management scene
         SceneLoaders.getInstance().gotoAdminViewScores(OnlineQuizzingApp.getInstance().getStage());
     }
