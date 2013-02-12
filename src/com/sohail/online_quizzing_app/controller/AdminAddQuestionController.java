@@ -9,7 +9,6 @@ import com.sohail.online_quizzing_app.SceneLoaders;
 import com.sohail.online_quizzing_app.model.Metadata;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.UUID;
 import javafx.collections.FXCollections;
@@ -46,19 +45,21 @@ public class AdminAddQuestionController implements Initializable {
     public void enableCancelAndClearKeyEvent(KeyEvent event) {
         cancel.setDisable(false);
         clear.setDisable(false);
+        difficulty.setDisable(false);
     }
 
     public void enableSave(ActionEvent event) {
         if (!difficulty.getValue().toString().equals("Select A Difficulty Level")) {
             save.setDisable(false);
-            cancel.setDisable(false);
-            clear.setDisable(false);
+        } else {
+            save.setDisable(true);
         }
     }
 
     public void selectImage(ActionEvent event) {
         cancel.setDisable(false);
         clear.setDisable(false);
+        difficulty.setDisable(false);
     }
 
     public void buttonEventCancel(ActionEvent event) {
@@ -113,14 +114,5 @@ public class AdminAddQuestionController implements Initializable {
                 "Think About It",
                 "Mind Boggling!");
         difficulty.setItems(options);
-        
-        // TEST
-        HashMap<String, String> metadata_quiz = metadata.getQuizMetadata();
-        Iterator<String> iterator = metadata_quiz.keySet().iterator();
-        while (iterator.hasNext()) {
-            String key = iterator.next().toString();
-            String value = metadata_quiz.get(key).toString();
-            System.out.println(key + ": " + value);
-        }
     }
 }

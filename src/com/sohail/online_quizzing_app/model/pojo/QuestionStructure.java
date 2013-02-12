@@ -129,9 +129,12 @@ public class QuestionStructure {
      *
      * @param question_number
      * @param question
+     * @param uuid
+     * @param uuid_quiz
+     * @param uuid_question  
      */
-    public void addToOptionList(int question_number, String question, String uuid) {
-        this.optionList.add(new OptionStructure(question_number, question, uuid));
+    public void addToOptionList(int question_number, String question, String uuid, String uuid_quiz, String uuid_question) {
+        this.optionList.add(new OptionStructure(question_number, question, uuid, uuid_quiz, uuid_question));
     }
 
     /**
@@ -140,9 +143,11 @@ public class QuestionStructure {
      * @param uuid
      * @param question
      * @param image
+     * @param uuid_quiz 
+     * @param uuid_question  
      */
-    public void addToOptionList(int question_number, String question, byte[] image, String uuid) {
-        this.optionList.add(new OptionStructure(question_number, question, image, uuid));
+    public void addToOptionList(int question_number, String question, byte[] image, String uuid, String uuid_quiz, String uuid_question) {
+        this.optionList.add(new OptionStructure(question_number, question, image, uuid, uuid_quiz, uuid_question));
     }
 
     /**

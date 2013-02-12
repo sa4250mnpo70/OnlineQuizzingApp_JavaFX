@@ -35,7 +35,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
               <children>
-                <ComboBox fx:id="difficulty" onAction="#enableSave" prefHeight="30.0" prefWidth="320.0" promptText="Select Difficulty Level for this question " visibleRowCount="5" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+                <ComboBox fx:id="difficulty" disable="true" onAction="#enableSave" prefHeight="30.0" prefWidth="320.0" promptText="Select Difficulty Level for this question " visibleRowCount="5" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />

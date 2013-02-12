@@ -8,6 +8,7 @@ import com.sohail.online_quizzing_app.AllScenesInterface;
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,8 +16,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -127,8 +130,39 @@ public class _AppHeaderController implements Initializable {
         }
     }
 
+    public void setHeaderTitle(String message, double duration, String message_type) {
+
+        txt_headerTitle.setText(message);
+        
+        switch (message_type) {
+            case "OK":
+                txt_headerTitle.setFill(Color.GREEN);
+                break;
+            case "INFO":
+                txt_headerTitle.setFill(Color.BLUE);
+                break;
+            case "WARNING":
+                txt_headerTitle.setFill(Color.ORANGERED);
+                break;
+            case "ERROR":
+                txt_headerTitle.setFill(Color.RED);
+                break;
+            default:
+                throw new AssertionError();
+        }
+
+        FadeTransition ft = new FadeTransition(
+                Duration.millis(duration), txt_headerTitle);
+        ft.setFromValue(1.0);
+        ft.setToValue(0.0);
+        ft.play();
+    }
+
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -148,31 +182,43 @@ public class _AppHeaderController implements Initializable {
 
             switch (stageTitle) {
                 case AllScenesInterface.ADMIN_ADD_NEW_QUIZ_FXML:
-                    txt_headerTitle.setText("ADMIN: Add New Quiz");
+                    setHeaderTitle("ADMIN_ADD_NEW_QUIZ_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_ADD_OPTION_FXML:
-                    txt_headerTitle.setText("ADMIN: Add New Option");
+                    setHeaderTitle("ADMIN_ADD_OPTION_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_ADD_QUESTION_FXML:
-                    txt_headerTitle.setText("ADMIN: Add New Question");
+                    setHeaderTitle("ADMIN_ADD_QUESTION_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_HOME_FXML:
-                    txt_headerTitle.setText("ADMIN: Home");
+                    setHeaderTitle("ADMIN_HOME_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_MANAGE_QUIZ_FXML:
-                    txt_headerTitle.setText("ADMIN: Manage Quiz");
+                    setHeaderTitle("ADMIN_MANAGE_QUIZ_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_MANAGE_USERS_FXML:
-                    txt_headerTitle.setText("ADMIN: Manage Users");
+                    setHeaderTitle("ADMIN_MANAGE_USERS_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_VIEW_QUIZ_FXML:
-                    txt_headerTitle.setText("ADMIN: View Quiz");
+                    setHeaderTitle("ADMIN_VIEW_QUIZ_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ADMIN_VIEW_SCORES_FXML:
-                    txt_headerTitle.setText("ADMIN: View Scores");
+                    setHeaderTitle("ADMIN_VIEW_SCORES_FXML", 5000, "OK");
                     break;
                 case AllScenesInterface.ONLINE_QUIZZING_APP_FXML:
-                    txt_headerTitle.setText("Welcome To Online Quizzing App!!");
+                    setHeaderTitle("ONLINE_QUIZZING_APP_FXML", 5000, "OK");
+                    break;
+                case AllScenesInterface.SIGNUP_FXML:
+                    setHeaderTitle("SIGNUP_FXML", 5000, "OK");
+                    break;
+                case AllScenesInterface.STUDENT_HOME_FXML:
+                    setHeaderTitle("STUDENT_HOME_FXML", 5000, "OK");
+                    break;
+                case AllScenesInterface.STUDENT_QUIZ_FXML:
+                    setHeaderTitle("STUDENT_QUIZ_FXML", 5000, "OK");
+                    break;
+                case AllScenesInterface.STUDENT_QUIZ_FINISH_FXML:
+                    setHeaderTitle("STUDENT_QUIZ_FINISH_FXML", 5000, "OK");
                     break;
                 default:
                     txt_headerTitle.setText("");

@@ -24,11 +24,11 @@ public class SceneLoaders implements AllScenesInterface {
      */
     private static SceneLoaders instance = new SceneLoaders();
 
-    private SceneLoaders() {
-    }
-
     public static SceneLoaders getInstance() {
         return instance;
+    }
+
+    private SceneLoaders() {
     }
 
     /*
@@ -123,6 +123,38 @@ public class SceneLoaders implements AllScenesInterface {
     public void gotoAdminAddOption(Stage stage) {
         try {
             replaceSceneContent(ADMIN_ADD_OPTION_FXML, ADMIN_ADD_OPTION_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void gotoSignup(Stage stage) {
+        try {
+            replaceSceneContent(SIGNUP_FXML, SIGNUP_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void gotoStudentHome(Stage stage) {
+        try {
+            replaceSceneContent(STUDENT_HOME_FXML, STUDENT_HOME_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void gotoStudentQuiz(Stage stage) {
+        try {
+            replaceSceneContent(STUDENT_QUIZ_FXML, STUDENT_QUIZ_CSS, stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void gotoStudentQuizFinish(Stage stage) {
+        try {
+            replaceSceneContent(STUDENT_QUIZ_FINISH_FXML, STUDENT_QUIZ_FINISH_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }

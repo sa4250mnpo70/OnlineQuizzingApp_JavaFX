@@ -18,9 +18,9 @@ import org.simpleframework.xml.core.Persister;
 public class Testing {
 
     public static void main(String args[]) {
-        OptionStructure option1 = new OptionStructure(1, "This is option 1.", String.valueOf(UUID.randomUUID()));
+        OptionStructure option1 = new OptionStructure(1, "This is option 1.", UUID.randomUUID().toString(), UUID.randomUUID().toString(), UUID.randomUUID().toString());
         option1.removeCorrectAnsFlag();
-        OptionStructure option2 = new OptionStructure(2, "This is option 2.", String.valueOf(UUID.randomUUID()));
+        OptionStructure option2 = new OptionStructure(2, "This is option 2.", UUID.randomUUID().toString(), UUID.randomUUID().toString(), UUID.randomUUID().toString());
         option2.removeCorrectAnsFlag();
 
         ArrayList<OptionStructure> optionsList = new ArrayList<OptionStructure>();

@@ -14,16 +14,20 @@ import org.simpleframework.xml.Root;
 @Root(name = "Option")
 public class OptionStructure {
 
-    @Attribute(name = "number", required = true)
-    private int number;
-    @Attribute(name = "text", required = true)
-    private String text;
-    @Attribute(name = "image", required = false)
-    private byte[] image;
-    @Attribute(name = "correctAns", required = false)
-    private Boolean correctAns;
+    @Attribute(name = "option_number", required = true)
+    private int option_number;
+    @Attribute(name = "option", required = true)
+    private String option;
+    @Attribute(name = "option_image", required = false)
+    private byte[] option_image;
+    @Attribute(name = "correct_answer", required = false)
+    private String correct_answer;
     @Attribute(name = "uuid", required = true)
     private String uuid;
+    @Attribute(name = "uuid_quiz", required = true)
+    private String uuid_quiz;
+    @Attribute(name = "uuid_question", required = true)
+    private String uuid_question;
 
     /**
      *
@@ -34,42 +38,50 @@ public class OptionStructure {
 
     /**
      *
-     * @param number
-     * @param text
+     * @param option_number
+     * @param option
      * @param uuid
+     * @param uuid_quiz
+     * @param uuid_question
      */
-    public OptionStructure(int number, String text, String uuid) {
-        this.number = number;
-        this.text = text;
+    public OptionStructure(int option_number, String option, String uuid, String uuid_quiz, String uuid_question) {
+        this.option_number = option_number;
+        this.option = option;
         this.uuid = uuid;
+        this.uuid_quiz = uuid_quiz;
+        this.uuid_question = uuid_question;
     }
 
     /**
      *
-     * @param number
-     * @param text
-     * @param image
+     * @param option_number
+     * @param option
+     * @param option_image
      * @param uuid
+     * @param uuid_quiz
+     * @param uuid_question
      */
-    public OptionStructure(int number, String text, byte[] image, String uuid) {
-        this.number = number;
-        this.text = text;
-        this.image = image;
+    public OptionStructure(int option_number, String option, byte[] option_image, String uuid, String uuid_quiz, String uuid_question) {
+        this.option_number = option_number;
+        this.option = option;
+        this.option_image = option_image;
         this.uuid = uuid;
+        this.uuid_quiz = uuid_quiz;
+        this.uuid_question = uuid_question;
     }
 
     /**
-     * @return the number
+     * @return the option_number
      */
     public int getNumber() {
-        return number;
+        return option_number;
     }
 
     /**
-     * @param number the number to set
+     * @param option_number the option_number to set
      */
-    public void setNumber(int number) {
-        this.number = number;
+    public void setNumber(int option_number) {
+        this.option_number = option_number;
     }
 
     /**
@@ -87,48 +99,76 @@ public class OptionStructure {
     }
 
     /**
-     * @return the text
+     * @return the option
      */
     public String getText() {
-        return text;
+        return option;
     }
 
     /**
-     * @param text the text to set
+     * @param option the option to set
      */
-    public void setText(String text) {
-        this.text = text;
+    public void setText(String option) {
+        this.option = option;
     }
 
     /**
-     * @return the image
+     * @return the option_image
      */
     public byte[] getImage() {
-        return image;
+        return option_image;
     }
 
     /**
-     * @param image the image to set
+     * @param option_image the option_image to set
      */
-    public void setImage(byte[] image) {
-        this.image = image;
+    public void setImage(byte[] option_image) {
+        this.option_image = option_image;
     }
 
     /**
-     * @return the correctAns
+     * @return the correct_answer
      */
-    public boolean isCorrectAns() {
-        return correctAns;
+    public String isCorrectAns() {
+        return correct_answer;
     }
 
     /**
-     * @param correctAns the correctAns to set
+     * @param correct_answer the correct_answer to set
      */
-    public void setCorrectAns(boolean correctAns) {
-        this.correctAns = correctAns;
+    public void setCorrectAns(String correct_answer) {
+        this.correct_answer = correct_answer;
     }
 
     public void removeCorrectAnsFlag() {
-        this.correctAns = null;
+        this.correct_answer = null;
+    }
+
+    /**
+     * @return the uuid_quiz
+     */
+    public String getUuid_quiz() {
+        return uuid_quiz;
+    }
+
+    /**
+     * @param uuid_quiz the uuid_quiz to set
+     */
+    public void setUuid_quiz(String uuid_quiz) {
+        this.uuid_quiz = uuid_quiz;
+    }
+
+    /**
+     * @return the uuid_question
+     */
+    public String getUuid_question() {
+        return uuid_question;
+    }
+
+    /**
+     * @param uuid_question the uuid_question to set
+     */
+    public void setUuid_question(String uuid_question) {
+        this.uuid_question = uuid_question;
     }
 }

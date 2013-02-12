@@ -10,78 +10,99 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane id="AdminAddOption" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddOptionController">
-    <bottom>
-        <fx:include source="_AppFooter.fxml" />
-    </bottom>
-    <center>
-        <GridPane>
-            <children>
-                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.rowSpan="7" GridPane.vgrow="SOMETIMES">
-                    <children>
-                        <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0" VBox.margin="$x1" VBox.vgrow="SOMETIMES">
-                            <children>
-                                <Label text="Type Your Option Below : " VBox.vgrow="SOMETIMES">
-                                    <VBox.margin>
-                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-                                    </VBox.margin>
-                                </Label>
-                                <TextArea prefWidth="-1.0" promptText="This is a sample Option." wrapText="true" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
-                            </children>
-                        </VBox>
-                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
-                            <children>
-                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="320.0" text="Click Me To Select an Image for the Option (Optional) " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
-                            <children>
-                                <CheckBox mnemonicParsing="false" text="CheckBox" HBox.hgrow="SOMETIMES">
-                                    <HBox.margin>
-                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-                                    </HBox.margin>
-                                </CheckBox>
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
-                            <children>
-                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Cancel" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
-                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Clear" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
-                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Save" HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
-                            </children>
-                        </HBox>
-                    </children>
-                </VBox>
-            </children>
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-        </GridPane>
-    </center>
-    <left>
-        <fx:include source="_AppAdminSideBar.fxml" />
-    </left>
-    <right>
-        <fx:include source="_AdminQuizRightSidebar.fxml" />
-    </right>
-    <stylesheets>
-        <URL value="@styles/AdminAddOption.css" />
-    </stylesheets>
-    <top>
-        <fx:include source="_AppHeader.fxml" />
-    </top>
+  <bottom>
+    <fx:include source="_AppFooter.fxml" />
+  </bottom>
+  <center>
+    <GridPane>
+      <children>
+        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.rowSpan="7" GridPane.vgrow="SOMETIMES">
+          <children>
+            <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0" VBox.margin="$x1" VBox.vgrow="SOMETIMES">
+              <children>
+                <Label text="Type Your Option Below : " VBox.vgrow="SOMETIMES">
+                  <VBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </VBox.margin>
+                </Label>
+                <TextArea fx:id="question" onKeyPressed="#enableCancelAndClearKeyEvent" prefWidth="-1.0" promptText="This is a sample Option." wrapText="true" VBox.margin="$x1" VBox.vgrow="SOMETIMES" />
+              </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
+              <children>
+                <Button fx:id="select_image" mnemonicParsing="false" onAction="#selectImage" prefHeight="30.0" prefWidth="320.0" text="Click Me To Select an Image for the Option (Optional) " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <CheckBox fx:id="correct_answer" mnemonicParsing="false" text="Select Me if this is the correct option" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </HBox.margin>
+                </CheckBox>
+              </children>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <Button fx:id="cancel" mnemonicParsing="false" onAction="#buttonEventCancel" prefHeight="40.0" prefWidth="150.0" text="Cancel" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </HBox.margin>
+                </Button>
+                <Button fx:id="clear" mnemonicParsing="false" onAction="#buttonEventClear" prefHeight="40.0" prefWidth="150.0" text="Clear" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </HBox.margin>
+                </Button>
+                <Button fx:id="save" mnemonicParsing="false" onAction="#buttonEventSave" prefHeight="40.0" prefWidth="150.0" text="Save" HBox.hgrow="SOMETIMES">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </HBox.margin>
+                </Button>
+              </children>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </VBox.margin>
+            </HBox>
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <left>
+    <fx:include source="_AppAdminSideBar.fxml" />
+  </left>
+  <right>
+    <fx:include source="_AdminQuizRightSidebar.fxml" />
+  </right>
+  <stylesheets>
+    <URL value="@styles/AdminAddOption.css" />
+  </stylesheets>
+  <top>
+    <fx:include source="_AppHeader.fxml" />
+  </top>
 </BorderPane>

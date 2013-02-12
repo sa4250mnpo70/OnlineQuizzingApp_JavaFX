@@ -23,6 +23,7 @@ public class Metadata {
 
     private Metadata() {
         questionMetadata.put("question_number", "0");
+        optionMetadata.put("option_number", "0");
     }
     
     public void AddToQuizMetadata(String key, String value){
