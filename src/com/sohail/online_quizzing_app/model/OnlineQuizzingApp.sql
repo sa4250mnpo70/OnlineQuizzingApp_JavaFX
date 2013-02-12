@@ -25,7 +25,6 @@ CREATE  TABLE IF NOT EXISTS `OnlineQuizzingApp`.`users` (
   `date_of_joining` DATE NOT NULL ,
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `email1_UNIQUE` (`email1` ASC) ,
-  UNIQUE INDEX `email2_UNIQUE` (`email2` ASC) ,
   UNIQUE INDEX `username_UNIQUE` (`username` ASC) ,
   UNIQUE INDEX `uuid_user_UNIQUE` (`uuid` ASC) )
 ENGINE = InnoDB;
@@ -154,8 +153,6 @@ CREATE  TABLE IF NOT EXISTS `OnlineQuizzingApp`.`quiz_solved` (
   `uuid_student` VARCHAR(45) NOT NULL ,
   `total_score` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
-  UNIQUE INDEX `uuid_quiz_solved_UNIQUE` (`uuid_quiz` ASC) ,
-  UNIQUE INDEX `uuid_user_solved_UNIQUE` (`uuid_student` ASC) ,
   CONSTRAINT `uuid_student_solved_fk`
     FOREIGN KEY (`uuid_student` )
     REFERENCES `OnlineQuizzingApp`.`students` (`uuid_user` )
@@ -179,10 +176,6 @@ CREATE  TABLE IF NOT EXISTS `OnlineQuizzingApp`.`submitted_answers` (
   `uuid_option` VARCHAR(45) NOT NULL ,
   `uuid_student` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) ,
-  UNIQUE INDEX `uuid_quiz_submitted_UNIQUE` (`uuid_quiz` ASC) ,
-  UNIQUE INDEX `uuid_question_submitted_UNIQUE` (`uuid_question` ASC) ,
-  UNIQUE INDEX `uuid_option_submitted_UNIQUE` (`uuid_option` ASC) ,
-  UNIQUE INDEX `uuid_student_submitted_UNIQUE` (`uuid_student` ASC) ,
   CONSTRAINT `uuid_student_submitted_fk`
     FOREIGN KEY (`uuid_student` )
     REFERENCES `OnlineQuizzingApp`.`students` (`uuid_user` )

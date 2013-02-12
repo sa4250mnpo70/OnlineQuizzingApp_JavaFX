@@ -5,9 +5,6 @@
 package com.sohail.online_quizzing_app;
 
 import javafx.application.Application;
-import javafx.scene.control.Dialogs;
-import javafx.scene.control.Dialogs.DialogOptions;
-import javafx.scene.control.Dialogs.DialogResponse;
 import javafx.stage.Stage;
 
 /**
@@ -42,21 +39,11 @@ public class OnlineQuizzingApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        //Run the bootstarp
+        BootStrap.getInstance().Initialize();
         try {
             stage = primaryStage;
             SceneLoaders.getInstance().gotoLogin(getStage());
-
-//            //Show dialog requesting full screen mode
-//            DialogResponse response = Dialogs.showConfirmDialog(stage,
-//                    "Do you want to continue with Full Screen Enabled. You may also switch between Full Screen and Normal Screen later.",
-//                    "For a better visual experience, it is recommended to run this application in Full Screen Mode.",
-//                    "Full Screen Access", DialogOptions.YES_NO);
-//            if (response.equals(response.YES)) {
-//                SceneLoaders.getInstance().doFullScreen(true, stage);
-//            } else {
-//                SceneLoaders.getInstance().doFullScreen(false, stage);
-//            }
-
             primaryStage.show();
         } catch (Exception ex) {
             //Handle Exception
