@@ -48,6 +48,8 @@ public class _AdminQuizRightSidebarController implements Initializable {
         SerializeXML.getInstance().AddQuestionsToQuiz(metadata.getQuestionMetadata());
         
         SceneLoaders.getInstance().gotoAdminAddQuestion(OnlineQuizzingApp.getInstance().getStage());
+        
+        //SerializeXML.getInstance().clearOptionList();
     }
     
     public void publishQuiz(ActionEvent event){
