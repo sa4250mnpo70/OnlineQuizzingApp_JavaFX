@@ -45,7 +45,8 @@ public class QuizStructure implements Serializable {
      *
      */
     public QuizStructure() {
-        question = new ArrayList<QuestionStructure>();
+        super();
+        question = new ArrayList<>();
     }
 
     /**
@@ -58,6 +59,7 @@ public class QuizStructure implements Serializable {
      * @param description
      * @param total_questions_in_quiz
      * @param total_questions_to_solve
+     * @param submission_date 
      * @param uuid
      */
     public QuizStructure(ArrayList<QuestionStructure> question,
@@ -106,14 +108,14 @@ public class QuizStructure implements Serializable {
     }
 
     /**
-     * @param paramList the paramList to set
+     * @param option 
      */
     public void setOptionList(ArrayList<OptionStructure> option) {
         this.option = option;
     }
 
     /**
-     * @return the paramList
+     * @return the option
      */
     public ArrayList<OptionStructure> getOptionList() {
         return option;

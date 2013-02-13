@@ -36,6 +36,7 @@ public class QuestionStructure implements Serializable {
      *
      */
     public QuestionStructure() {
+        super();
         optionList = new ArrayList<OptionStructure>();
     }
 

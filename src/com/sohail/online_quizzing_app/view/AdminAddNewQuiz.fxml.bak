@@ -200,7 +200,7 @@
           <children>
             <Button fx:id="cancel" cancelButton="true" disable="true" mnemonicParsing="false" onAction="#buttonEventCancel" prefHeight="200.0" prefWidth="200.0" text="Cancel Quiz Creation" HBox.hgrow="SOMETIMES">
               <tooltip>
-                <Tooltip text="I will clear the form!!" />
+                <Tooltip text="I will clear the form !!" />
               </tooltip>
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
