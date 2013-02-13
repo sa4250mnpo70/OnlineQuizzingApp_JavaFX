@@ -30,7 +30,7 @@
             </VBox>
             <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">
               <children>
-                <Button fx:id="select_image" mnemonicParsing="false" onAction="#enableSave" prefHeight="30.0" prefWidth="320.0" text="Click Me To Select an Image for the Question (Optional) " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+                <Button fx:id="select_image" mnemonicParsing="false" onAction="#selectImage" prefHeight="30.0" prefWidth="320.0" text="Click Me To Select an Image for the Question (Optional) " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
               </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x1">

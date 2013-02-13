@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AppAnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.tests.TestController">
+    <bottom>
+        <fx:include source="../view/_AppFooter.fxml" />
+    </bottom>
+    <left>
+        <fx:include source="../view/_AppAdminSideBar.fxml" />
+    </left>
+    <stylesheets>
+        <URL value="@test.css" />
+    </stylesheets>
+    <top>
+        <fx:include source="../view/_AppHeader.fxml" />
+    </top>
+</BorderPane>

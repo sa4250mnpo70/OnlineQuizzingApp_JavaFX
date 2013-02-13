@@ -6,7 +6,12 @@ package com.sohail.online_quizzing_app.controller;
 
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
+import com.sohail.online_quizzing_app.methods.Images;
 import com.sohail.online_quizzing_app.model.Metadata;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -20,6 +25,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.FileChooser;
+import org.apache.commons.codec.binary.Base64;
 
 /**
  * FXML Controller class
@@ -40,6 +47,7 @@ public class AdminAddQuestionController implements Initializable {
     private Button clear;
     @FXML
     private Button save;
+    String image_data = null;
     private Metadata metadata = Metadata.getInstance();
 
     public void enableCancelAndClearKeyEvent(KeyEvent event) {
@@ -60,6 +68,7 @@ public class AdminAddQuestionController implements Initializable {
         cancel.setDisable(false);
         clear.setDisable(false);
         difficulty.setDisable(false);
+        image_data = Images.getInstance().read();
     }
 
     public void buttonEventCancel(ActionEvent event) {
@@ -76,13 +85,12 @@ public class AdminAddQuestionController implements Initializable {
     public void buttonEventSave(ActionEvent event) {
         //Save details to Question Metadata
         String question_value = question.getText();
-        String image_value = getImage();
         String difficulty_value = difficulty.getValue().toString();
         int question_no = Integer.parseInt(metadata.getQuestionMetadata().get("question_number"));
         question_no++;
         HashMap<String, String> map = new HashMap<>(6);
         map.put("question", question_value);
-        map.put("question_image", image_value);
+        map.put("question_image", image_data);
         map.put("difficulty", difficulty_value);
         map.put("question_number", String.valueOf(question_no));
         map.put("uuid", UUID.randomUUID().toString());
@@ -91,10 +99,6 @@ public class AdminAddQuestionController implements Initializable {
 
         //Load the Add Option Scene
         SceneLoaders.getInstance().gotoAdminAddOption(OnlineQuizzingApp.getInstance().getStage());
-    }
-
-    private String getImage() {
-        return "Image selection is not yet supported";
     }
 
     /**
