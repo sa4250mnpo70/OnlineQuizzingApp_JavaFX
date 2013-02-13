@@ -6,7 +6,7 @@ package com.sohail.online_quizzing_app.controller;
 
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
-import com.sohail.online_quizzing_app.methods.Images;
+import com.sohail.online_quizzing_app.methods.ManageImages;
 import com.sohail.online_quizzing_app.model.Metadata;
 import java.net.URL;
 import java.util.HashMap;
@@ -62,7 +62,7 @@ public class AdminAddQuestionController implements Initializable {
         cancel.setDisable(false);
         clear.setDisable(false);
         difficulty.setDisable(false);
-        image_data = Images.getInstance().read();
+        image_data = ManageImages.getInstance().read();
     }
 
     public void buttonEventCancel(ActionEvent event) {

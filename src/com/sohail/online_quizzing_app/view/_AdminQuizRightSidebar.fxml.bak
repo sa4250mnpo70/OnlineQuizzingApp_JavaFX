@@ -25,7 +25,7 @@
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </Label>
-    <ComboBox id="combo_adminSelectQNo" fx:id="select_q" mouseTransparent="false" prefHeight="30.0" prefWidth="200.0" promptText="Click Me" VBox.vgrow="SOMETIMES">
+    <ComboBox id="combo_adminSelectQNo" fx:id="select_q" disable="true" mouseTransparent="false" prefHeight="30.0" prefWidth="200.0" promptText="Click Me" VBox.vgrow="SOMETIMES">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Item 1" />
@@ -37,22 +37,22 @@
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </ComboBox>
-    <Button id="btn_adminDeleteQ" fx:id="delete" cancelButton="true" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Delete">
+    <Button id="btn_adminDeleteQ" fx:id="delete" cancelButton="true" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Delete">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
       </VBox.margin>
     </Button>
-    <Button id="btn_adminPreviousQ" fx:id="previous" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Previous">
+    <Button id="btn_adminPreviousQ" fx:id="previous" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Previous">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </Button>
-    <Button id="btn_adminManageQuiz" fx:id="next" disable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Next">
+    <Button id="btn_adminManageQuiz" fx:id="next" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Next">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </Button>
-    <Button id="btn_adminViewQuiz" fx:id="update" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Update">
+    <Button id="btn_adminViewQuiz" fx:id="update" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Update">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
@@ -62,7 +62,7 @@
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>
     </Button>
-    <Button id="btn_adminUpdateQ" fx:id="publish_quiz" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Publish Quiz" VBox.vgrow="SOMETIMES">
+    <Button id="btn_adminUpdateQ" fx:id="publish_quiz" defaultButton="true" mnemonicParsing="false" onAction="#publishQuiz" prefHeight="40.0" prefWidth="140.0" text="Publish Quiz" VBox.vgrow="SOMETIMES">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>

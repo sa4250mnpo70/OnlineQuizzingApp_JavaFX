@@ -21,7 +21,7 @@ import org.simpleframework.xml.core.Persister;
 public class SerializeXML {
 
     private static SerializeXML instance;
-    
+
     public static SerializeXML getInstance() {
         if (instance == null) {
             return instance = new SerializeXML();
@@ -31,11 +31,10 @@ public class SerializeXML {
     }
     private HashMap<Integer, HashMap<String, String>> option_set = null;
     private HashMap<Integer, HashMap<String, String>> question_set = null;
-
     private ArrayList<OptionStructure> optionsList = null;
     private ArrayList<ArrayList<OptionStructure>> array_of_option_lists = null;
     private ArrayList<QuestionStructure> questionsList = null;
-    
+
     private SerializeXML() {
         option_set = new HashMap<>();
         question_set = new HashMap<>();
@@ -43,13 +42,16 @@ public class SerializeXML {
         questionsList = new ArrayList<QuestionStructure>();
         array_of_option_lists = new ArrayList<>();
     }
-    
-    public void clearOptionList(){
+
+    public void clearOptionList() {
         optionsList = new ArrayList<OptionStructure>();
+        //Reset the Options Counter
+        Metadata metadata = Metadata.getInstance();
+        metadata.getOptionMetadata().put("option_number", "0");
     }
 
     public void AddOptionsToQuestion(HashMap<String, String> map) {
-        
+
         String option = map.get("option");
         String option_image = map.get("option_image");
         String correct_answer = map.get("correct_answer");
@@ -57,10 +59,10 @@ public class SerializeXML {
         String uuid = map.get("uuid");
         String uuid_quiz = map.get("uuid_quiz");
         String uuid_question = map.get("uuid_question");
-        
+
         OptionStructure option_structure = new OptionStructure(option_number, option, option_image, uuid, uuid_quiz, uuid_question);
         optionsList.add(option_structure);
-        
+
         ArrayList<OptionStructure> localOptionsList = new ArrayList<>();
         localOptionsList = optionsList;
         Metadata metadata = Metadata.getInstance();
@@ -70,17 +72,17 @@ public class SerializeXML {
     }
 
     public void AddQuestionsToQuiz(HashMap<String, String> map) {
-        
+
         String question = map.get("question");
         String question_image = map.get("question_image");
         String difficulty = map.get("difficulty");
         int question_number = Integer.parseInt(map.get("question_number"));
         String uuid = map.get("uuid");
         String uuid_quiz = map.get("uuid_quiz");
-        
+
         QuestionStructure question_structure = new QuestionStructure(array_of_option_lists.get(question_number - 1), question_number, difficulty, question, question_image, uuid, uuid_quiz);
         questionsList.add(question_structure);
-        
+
         clearOptionList();
     }
 
@@ -164,7 +166,7 @@ public class SerializeXML {
         //Format the Quiz
         Metadata metadata = Metadata.getInstance();
         HashMap<String, String> metadata_quiz = metadata.getQuizMetadata();
-        
+
         String description = metadata_quiz.get("description");
         String due_date = metadata_quiz.get("due_date");
         String subject = metadata_quiz.get("subject");
@@ -174,7 +176,7 @@ public class SerializeXML {
         String total_questions_to_solve = metadata_quiz.get("total_questions_to_solve");
         String submission_date = metadata_quiz.get("submission_date");
         String uuid = metadata_quiz.get("uuid");
-        
+
         QuizStructure quiz = new QuizStructure(questionsList, subject, topic, time_limit, due_date, description, total_questions, total_questions_to_solve, submission_date, uuid);
 
         try {
@@ -182,10 +184,10 @@ public class SerializeXML {
             String quizXML = byteArrayOutputStream.toString();
 
             questionsList.clear();
-            
+
             //TEST 
             System.out.println(quizXML);
-            
+
             return quizXML;
         } catch (Exception e) {
             throw e;

@@ -2,8 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sohail.online_quizzing_app.methods;
+package com.sohail.online_quizzing_app.tests;
 
+import com.sohail.online_quizzing_app.methods.SecurityFeatures;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

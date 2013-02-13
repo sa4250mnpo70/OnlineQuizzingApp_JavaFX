@@ -4,7 +4,7 @@
  */
 package com.sohail.online_quizzing_app.tests;
 
-import com.sohail.online_quizzing_app.methods.Images;
+import com.sohail.online_quizzing_app.methods.ManageImages;
 import com.sohail.online_quizzing_app.model.Metadata;
 import com.sohail.online_quizzing_app.model.SerializeXML;
 import com.sohail.online_quizzing_app.model.pojo.OptionStructure;
@@ -164,9 +164,9 @@ public class Testing extends Application {
     }
     
     public static void testImageReadWrite(){
-        String image_data = Images.getInstance().read();
+        String image_data = ManageImages.getInstance().read();
         System.out.println("IMAGE DATA: " + image_data);
         
-        Images.getInstance().write(image_data);
+        ManageImages.getInstance().write(image_data);
     }
 }

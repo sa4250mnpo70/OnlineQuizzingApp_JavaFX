@@ -6,7 +6,7 @@ package com.sohail.online_quizzing_app.controller;
 
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
-import com.sohail.online_quizzing_app.methods.Images;
+import com.sohail.online_quizzing_app.methods.ManageImages;
 import com.sohail.online_quizzing_app.model.Metadata;
 import com.sohail.online_quizzing_app.model.SerializeXML;
 import java.net.URL;
@@ -53,7 +53,7 @@ public class AdminAddOptionController implements Initializable {
     public void selectImage(ActionEvent event) {
         cancel.setDisable(false);
         clear.setDisable(false);
-        image_data = Images.getInstance().read();
+        image_data = ManageImages.getInstance().read();
     }
 
     public void buttonEventCancel(ActionEvent event) {
