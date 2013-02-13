@@ -4,6 +4,7 @@
  */
 package com.sohail.online_quizzing_app.model.pojo;
 
+import java.io.Serializable;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -12,14 +13,14 @@ import org.simpleframework.xml.Root;
  * @author sohail.alam
  */
 @Root(name = "Option")
-public class OptionStructure {
+public class OptionStructure implements Serializable {
 
     @Attribute(name = "option_number", required = true)
     private int option_number;
     @Attribute(name = "option", required = true)
     private String option;
     @Attribute(name = "option_image", required = false)
-    private byte[] option_image;
+    private String option_image;
     @Attribute(name = "correct_answer", required = false)
     private String correct_answer;
     @Attribute(name = "uuid", required = true)
@@ -61,7 +62,7 @@ public class OptionStructure {
      * @param uuid_quiz
      * @param uuid_question
      */
-    public OptionStructure(int option_number, String option, byte[] option_image, String uuid, String uuid_quiz, String uuid_question) {
+    public OptionStructure(int option_number, String option, String option_image, String uuid, String uuid_quiz, String uuid_question) {
         this.option_number = option_number;
         this.option = option;
         this.option_image = option_image;
@@ -73,14 +74,14 @@ public class OptionStructure {
     /**
      * @return the option_number
      */
-    public int getNumber() {
+    public int getOptionNumber() {
         return option_number;
     }
 
     /**
      * @param option_number the option_number to set
      */
-    public void setNumber(int option_number) {
+    public void setOptionNumber(int option_number) {
         this.option_number = option_number;
     }
 
@@ -101,28 +102,28 @@ public class OptionStructure {
     /**
      * @return the option
      */
-    public String getText() {
+    public String getOption() {
         return option;
     }
 
     /**
      * @param option the option to set
      */
-    public void setText(String option) {
+    public void setOption(String option) {
         this.option = option;
     }
 
     /**
      * @return the option_image
      */
-    public byte[] getImage() {
+    public String getOptionImage() {
         return option_image;
     }
 
     /**
      * @param option_image the option_image to set
      */
-    public void setImage(byte[] option_image) {
+    public void setOptionImage(String option_image) {
         this.option_image = option_image;
     }
 

@@ -8,7 +8,7 @@ import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
 import com.sohail.online_quizzing_app.methods.Images;
 import com.sohail.online_quizzing_app.model.Metadata;
-import com.sohail.online_quizzing_app.tests.Testing;
+import com.sohail.online_quizzing_app.model.SerializeXML;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -88,12 +88,11 @@ public class AdminAddOptionController implements Initializable {
         map.put("uuid_quiz", metadata.getQuizMetadata().get("uuid"));
         map.put("uuid_question", metadata.getQuestionMetadata().get("uuid"));
         metadata.setOptionMetadata(map);
-        
+
+        SerializeXML.getInstance().AddOptionsToQuestion(map);
+
         //Load the Add Option Scene
         SceneLoaders.getInstance().gotoAdminAddOption(OnlineQuizzingApp.getInstance().getStage());
-        
-        //TEST
-        Testing.testModelHashMapEntries();
     }
 
     /**
@@ -104,7 +103,7 @@ public class AdminAddOptionController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         correct_answer.setSelected(false);
     }
 }

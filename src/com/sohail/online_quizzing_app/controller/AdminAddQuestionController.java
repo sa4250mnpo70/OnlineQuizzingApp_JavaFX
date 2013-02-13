@@ -8,10 +8,6 @@ import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
 import com.sohail.online_quizzing_app.methods.Images;
 import com.sohail.online_quizzing_app.model.Metadata;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -25,8 +21,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.FileChooser;
-import org.apache.commons.codec.binary.Base64;
 
 /**
  * FXML Controller class

@@ -36,6 +36,8 @@ public class QuizStructure implements Serializable {
     private String total_questions;
     @Attribute(name = "total_questions_to_solve", required = true)
     private String total_questions_to_solve;
+    @Attribute(name = "submission_date", required = true)
+    private String submission_date;
     @Attribute(name = "uuid", required = true)
     private String uuid;
 
@@ -59,7 +61,7 @@ public class QuizStructure implements Serializable {
      * @param uuid
      */
     public QuizStructure(ArrayList<QuestionStructure> question,
-            String subject, String topic, String timeLimit, String due_date, String description, String total_questions_in_quiz, String total_questions_to_solve, String uuid) {
+            String subject, String topic, String timeLimit, String due_date, String description, String total_questions_in_quiz, String total_questions_to_solve, String submission_date, String uuid) {
         this.question = question;
         this.subject = subject;
         this.topic = topic;
@@ -68,6 +70,7 @@ public class QuizStructure implements Serializable {
         this.description = description;
         this.total_questions = total_questions_in_quiz;
         this.total_questions_to_solve = total_questions_to_solve;
+        this.submission_date = submission_date;
         this.uuid = uuid;
     }
 
@@ -254,5 +257,19 @@ public class QuizStructure implements Serializable {
      */
     public void setTotal_questions_to_solve(String total_questions_to_solve) {
         this.total_questions_to_solve = total_questions_to_solve;
+    }
+
+    /**
+     * @return the submission_date
+     */
+    public String getSubmission_date() {
+        return submission_date;
+    }
+
+    /**
+     * @param submission_date the submission_date to set
+     */
+    public void setSubmission_date(String submission_date) {
+        this.submission_date = submission_date;
     }
 }

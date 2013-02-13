@@ -4,6 +4,7 @@
  */
 package com.sohail.online_quizzing_app.model.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
@@ -14,7 +15,7 @@ import org.simpleframework.xml.Root;
  * @author sohail.alam
  */
 @Root(name = "Question")
-public class QuestionStructure {
+public class QuestionStructure implements Serializable {
 
     @ElementList(required = true, empty = false, inline = true, type = OptionStructure.class)
     private ArrayList<OptionStructure> optionList;
@@ -24,8 +25,8 @@ public class QuestionStructure {
     private String difficulty;
     @Attribute(name = "question", required = true)
     private String question;
-    @Attribute(name = "question_image", required = false)
-    private byte[] question_image;
+    @Attribute(name = "question_question_image", required = false)
+    private String question_question_image;
     @Attribute(name = "uuid", required = true)
     private String uuid;
     @Attribute(name = "uuid_quiz", required = true)
@@ -64,8 +65,7 @@ public class QuestionStructure {
      * @param uuid
      * @param uuid_quiz  
      */
-    public QuestionStructure(ArrayList<OptionStructure> optionList,
-            int question_number, String difficulty, String question, String uuid, String uuid_quiz) {
+    public QuestionStructure(ArrayList<OptionStructure> optionList, int question_number, String difficulty, String question, String uuid, String uuid_quiz) {
 
         this.optionList = optionList;
         this.question_number = question_number;
@@ -82,17 +82,17 @@ public class QuestionStructure {
      * @param uuid
      * @param difficulty
      * @param question
-     * @param image
+     * @param question_image
      */
-    public QuestionStructure(ArrayList<OptionStructure> optionList,
-            int question_number, String difficulty, String question, byte[] image, String uuid) {
+    public QuestionStructure(ArrayList<OptionStructure> optionList, int question_number, String difficulty, String question, String question_image, String uuid, String uuid_quiz) {
 
         this.optionList = optionList;
         this.question_number = question_number;
         this.difficulty = difficulty;
         this.question = question;
-        this.question_image = image;
+        this.question_question_image = question_image;
         this.uuid = uuid;
+        this.uuid_quiz = uuid_quiz;
     }
 
     /**
@@ -142,12 +142,12 @@ public class QuestionStructure {
      * @param question_number
      * @param uuid
      * @param question
-     * @param image
+     * @param question_image
      * @param uuid_quiz 
      * @param uuid_question  
      */
-    public void addToOptionList(int question_number, String question, byte[] image, String uuid, String uuid_quiz, String uuid_question) {
-        this.optionList.add(new OptionStructure(question_number, question, image, uuid, uuid_quiz, uuid_question));
+    public void addToOptionList(int question_number, String question, String question_image, String uuid, String uuid_quiz, String uuid_question) {
+        this.optionList.add(new OptionStructure(question_number, question, question_image, uuid, uuid_quiz, uuid_question));
     }
 
     /**
@@ -214,17 +214,17 @@ public class QuestionStructure {
     }
 
     /**
-     * @return the image
+     * @return the question_image
      */
-    public byte[] getImage() {
-        return question_image;
+    public String getQuestionImage() {
+        return question_question_image;
     }
 
     /**
-     * @param image the image to set
+     * @param question_image the question_image to set
      */
-    public void setImage(byte[] image) {
-        this.question_image = image;
+    public void setQuestionImage(String question_image) {
+        this.question_question_image = question_image;
     }
 
     /**

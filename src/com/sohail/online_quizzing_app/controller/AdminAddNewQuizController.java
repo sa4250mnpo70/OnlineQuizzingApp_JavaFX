@@ -8,6 +8,9 @@ import com.sohail.online_quizzing_app.OnlineQuizzingApp;
 import com.sohail.online_quizzing_app.SceneLoaders;
 import com.sohail.online_quizzing_app.model.Metadata;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.UUID;
@@ -44,7 +47,6 @@ public class AdminAddNewQuizController implements Initializable {
     private Button cancel;
     @FXML
     private Button start;
-    
     private Metadata metadata = Metadata.getInstance();
 
     public void enableTopic(KeyEvent event) {
@@ -84,7 +86,12 @@ public class AdminAddNewQuizController implements Initializable {
         String description_value = description.getText();
         String total_Q_value = total_quiz_questions.getText();
         String total_Q_to_solve_value = total_questions_to_solve.getText();
-        
+
+        //Get Today's date
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        String date = dateFormat.format(cal.getTime());
+
         HashMap<String, String> quiz_metadata = new HashMap<>(8);
 
         quiz_metadata.put("subject", subject_value);
@@ -94,8 +101,9 @@ public class AdminAddNewQuizController implements Initializable {
         quiz_metadata.put("description", description_value);
         quiz_metadata.put("total_questions", total_Q_value);
         quiz_metadata.put("total_questions_to_solve", total_Q_to_solve_value);
+        quiz_metadata.put("submission_date", date);
         quiz_metadata.put("uuid", UUID.randomUUID().toString());
-        
+
         metadata.setQuizMetadata(quiz_metadata);
 
         //Load the Add Question Scene

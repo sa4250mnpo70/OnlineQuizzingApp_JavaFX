@@ -6,6 +6,7 @@ package com.sohail.online_quizzing_app.tests;
 
 import com.sohail.online_quizzing_app.methods.Images;
 import com.sohail.online_quizzing_app.model.Metadata;
+import com.sohail.online_quizzing_app.model.SerializeXML;
 import com.sohail.online_quizzing_app.model.pojo.OptionStructure;
 import com.sohail.online_quizzing_app.model.pojo.QuestionStructure;
 import com.sohail.online_quizzing_app.model.pojo.QuizStructure;
@@ -53,8 +54,14 @@ public class Testing extends Application {
 //        testModelHashMapEntries();
 //        System.out.println("**************************** Testing FileChooser ****************************");
 //        testFileChooser();
-        System.out.println("**************************** Testing Image Read/Write ****************************");
-        testImageReadWrite();
+//        System.out.println("**************************** Testing Image Read/Write ****************************");
+//        testImageReadWrite();
+//        System.out.println("**************************** Serialize Option ****************************");
+//        SerializeXML.getInstance().doOptionsSerialize();
+//        System.out.println("**************************** Serialize Question ****************************");
+//        SerializeXML.getInstance().doQuestionsSerialize();
+//        System.out.println("**************************** Serialize Quiz ****************************");
+//        SerializeXML.getInstance().doQuizSerialize();
         
         stop();
     }
@@ -87,7 +94,7 @@ public class Testing extends Application {
         questionList.add(question1);
         questionList.add(question2);
 
-        QuizStructure quiz = new QuizStructure(questionList, "Test", "Test1", "timeLimit", "duedate", "description", "totalQ", "solveQ", String.valueOf(UUID.randomUUID()));
+        QuizStructure quiz = new QuizStructure(questionList, "Test", "Test1", "timeLimit", "duedate", "description", "totalQ", "solveQ", "2013-02-13", String.valueOf(UUID.randomUUID()));
 
         Serializer serialize = new Persister();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
