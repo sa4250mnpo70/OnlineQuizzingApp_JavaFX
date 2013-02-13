@@ -4,6 +4,7 @@
  */
 package com.sohail.online_quizzing_app.tests;
 
+import com.sohail.online_quizzing_app.methods.Images;
 import com.sohail.online_quizzing_app.model.Metadata;
 import com.sohail.online_quizzing_app.model.pojo.OptionStructure;
 import com.sohail.online_quizzing_app.model.pojo.QuestionStructure;
@@ -28,6 +29,11 @@ import org.simpleframework.xml.core.Persister;
  */
 public class Testing extends Application {
 
+    @Override
+    public void stop() throws Exception {
+        super.stop(); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private static Testing instance;
     private Stage stage;
 
@@ -41,12 +47,16 @@ public class Testing extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        System.out.println("****************************** Testing XML Serialization ******************************");
-        testXMLSerialization();
+//        System.out.println("****************************** Testing XML Serialization ******************************");
+//        testXMLSerialization();
 //        System.out.println("**************************** Testing Model HashMap Entries ****************************");
 //        testModelHashMapEntries();
-        System.out.println("**************************** Testing FileChooser ****************************");
-        testFileChooser();
+//        System.out.println("**************************** Testing FileChooser ****************************");
+//        testFileChooser();
+        System.out.println("**************************** Testing Image Read/Write ****************************");
+        testImageReadWrite();
+        
+        stop();
     }
 
     /**
@@ -144,5 +154,12 @@ public class Testing extends Application {
         //Show open file dialog
         File file = fileChooser.showOpenDialog(null);
         System.out.println("Selected Image Path: " + file.getPath());
+    }
+    
+    public static void testImageReadWrite(){
+        String image_data = Images.getInstance().read();
+        System.out.println("IMAGE DATA: " + image_data);
+        
+        Images.getInstance().write(image_data);
     }
 }

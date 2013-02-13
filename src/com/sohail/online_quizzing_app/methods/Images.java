@@ -63,10 +63,10 @@ public class Images {
         //Choose an image file
         FileChooser file_chooser = new FileChooser();
 //        //Set extension filter
-//        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Images Only are allowed", "*.jpeg", "*.jpg", "*.gif", "*.bmp");
-//        file_chooser.getExtensionFilters().add(extFilter);
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Images Only are allowed", "*.jpeg", "*.jpg", "*.gif", "*.bmp");
+        file_chooser.getExtensionFilters().add(extFilter);
         //Show open file dialog
-        File image_file = file_chooser.showOpenDialog(null);
+        File image_file = file_chooser.showSaveDialog(null);
 
         // Write a image byte array into file system
         FileOutputStream imageOutFile = null;
