@@ -15,7 +15,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.UUID;
+import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -23,15 +26,34 @@ import org.simpleframework.xml.core.Persister;
  *
  * @author sohail.alam
  */
-public class Testing {
+public class Testing extends Application {
+
+    private static Testing instance;
+    private Stage stage;
+
+    public Testing() {
+        instance = this;
+    }
 
     public static void main(String args[]) {
-//        System.out.println("****************************** Testing XML Serialization ******************************");
-//        testXMLSerialization();
-        System.out.println("**************************** Testing Model HashMap Entries ****************************");
-        testModelHashMapEntries();
-//        System.out.println("**************************** Testing FileChooser ****************************");
-//        testFileChooser();
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        System.out.println("****************************** Testing XML Serialization ******************************");
+        testXMLSerialization();
+//        System.out.println("**************************** Testing Model HashMap Entries ****************************");
+//        testModelHashMapEntries();
+        System.out.println("**************************** Testing FileChooser ****************************");
+        testFileChooser();
+    }
+
+    /**
+     * @return the stage
+     */
+    public Stage getStage() {
+        return stage;
     }
 
     /*
