@@ -29,7 +29,6 @@ public class TestDeserialize {
         }
 
         ArrayList<QuestionStructure> questions = quiz.getQuestions();
-        ArrayList<OptionStructure> options = quiz.getOptionList();
 
         System.out.println("Quiz Details:");
         System.out.println("Quiz Subject: " + quiz.getSubject());
@@ -48,6 +47,8 @@ public class TestDeserialize {
             System.out.println("Question UUID: " + questionStructure.getUuid());
             System.out.println("Quiz UUID: " + questionStructure.getUuid_quiz());
             System.out.println("---------------------------------------------------");
+            //Iterate over each options of the question
+            ArrayList<OptionStructure> options = quiz.getOptionList();
             for (OptionStructure optionStructure : options) {
                 System.out.println("Option: " + optionStructure.getOption());
                 System.out.println("Option Image: " + optionStructure.getOptionImage());
