@@ -19,6 +19,7 @@ public interface AllScenesInterface {
     public static final String ADMIN_MANAGE_USERS_FXML = "view/AdminManageUsers.fxml";
     public static final String ADMIN_VIEW_QUIZ_FXML = "view/AdminViewQuiz.fxml";
     public static final String ADMIN_VIEW_SCORES_FXML = "view/AdminViewScores.fxml";
+    public static final String DISPLAY_IMAGE_FXML = "view/DisplayImage.fxml";
     public static final String ONLINE_QUIZZING_APP_FXML = "view/OnlineQuizzingApp.fxml";
     public static final String SIGNUP_FXML = "view/Signup.fxml";
     public static final String STUDENT_HOME_FXML = "view/StudentHome.fxml";
@@ -33,6 +34,7 @@ public interface AllScenesInterface {
     public static final String ADMIN_MANAGE_QUIZ_CSS = "view/styles/AdminManageQuiz.css";
     public static final String ADMIN_VIEW_QUIZ_CSS = "view/styles/AdminViewQuiz.css";
     public static final String ADMIN_VIEW_SCORES_CSS = "view/styles/AdminViewScores.css";
+    public static final String DISPLAY_IMAGE_CSS = "view/styles/DisplayImage.css";
     public static final String ONLINE_QUIZZING_APP_CSS = "view/styles/OnlineQuizzingApp.css";
     public static final String SIGNUP_CSS = "view/styles/Signup.css";
     public static final String STUDENT_HOME_CSS = "view/styles/StudentHome.css";

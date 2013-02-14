@@ -13,7 +13,7 @@
   <children>
     <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
       <children>
-        <ImageView fx:id="imageView_appLogo" fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+        <ImageView fx:id="imageView_appLogo" fitHeight="100.0" fitWidth="200.0" onMouseClicked="#test" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
           <image>
             <Image url="@image/logo.jpg" />
           </image>
@@ -66,7 +66,7 @@
           <children>
             <Button fx:id="btn_appToggleFullScreen" mnemonicParsing="false" onAction="#handleAppToggleFullScreenButtonAction" prefHeight="100.0" prefWidth="400.0" text="Toggle Full Screen Mode" HBox.hgrow="SOMETIMES">
               <tooltip>
-                <Tooltip text="Empty Tooltip" />
+                <Tooltip text="Enjoy the full screen view..." />
               </tooltip>
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -91,6 +91,9 @@
                       </HBox.margin>
                     </Text>
                     <Button fx:id="btn_appLogout" alignment="CENTER" cancelButton="false" defaultButton="false" disable="false" mnemonicParsing="false" text="Logout" visible="true" HBox.hgrow="SOMETIMES">
+                      <tooltip>
+                        <Tooltip text="So you want to logout?? Click Me!" />
+                      </tooltip>
                       <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                       </HBox.margin>

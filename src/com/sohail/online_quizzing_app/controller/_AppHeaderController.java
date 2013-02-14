@@ -6,6 +6,7 @@ package com.sohail.online_quizzing_app.controller;
 
 import com.sohail.online_quizzing_app.AllScenesInterface;
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
+import com.sohail.online_quizzing_app.StageCreator;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
@@ -133,7 +134,7 @@ public class _AppHeaderController implements Initializable {
     public void setHeaderTitle(String message, double duration, String message_type) {
 
         txt_headerTitle.setText(message);
-        
+
         switch (message_type) {
             case "OK":
                 txt_headerTitle.setFill(Color.GREEN);
