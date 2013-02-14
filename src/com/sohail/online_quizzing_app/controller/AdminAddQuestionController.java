@@ -82,6 +82,9 @@ public class AdminAddQuestionController implements Initializable {
         clear.setDisable(false);
         difficulty.setDisable(false);
         image_data = ManageImages.getInstance().read();
+        
+        select_image.setText("Image has been selected!");
+        select_image.setDisable(true);
     }
 
     public void buttonEventCancel(ActionEvent event) {

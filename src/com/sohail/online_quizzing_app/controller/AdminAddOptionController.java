@@ -73,6 +73,9 @@ public class AdminAddOptionController implements Initializable {
         cancel.setDisable(false);
         clear.setDisable(false);
         image_data = ManageImages.getInstance().read();
+        
+        select_image.setText("Image has been selected!");
+        select_image.setDisable(true);
     }
 
     public void buttonEventCancel(ActionEvent event) {

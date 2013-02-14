@@ -14,11 +14,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -119,10 +117,10 @@ public class _AppHeaderController implements Initializable {
         
         switch (message_type) {
             case "OK":
-                txt_headerTitle.setFill(Color.GREEN);
+                txt_headerTitle.setFill(Color.LIGHTYELLOW);
                 break;
             case "INFO":
-                txt_headerTitle.setFill(Color.BLUE);
+                txt_headerTitle.setFill(Color.LIGHTGREEN);
                 break;
             case "WARNING":
                 txt_headerTitle.setFill(Color.ORANGERED);
