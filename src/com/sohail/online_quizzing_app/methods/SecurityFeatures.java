@@ -32,7 +32,7 @@ public class SecurityFeatures {
      * @param INPUT
      * @return Hashed String
      */
-    public String Hash(final String HASH_METHOD, final String INPUT) {
+    public String hash(final String HASH_METHOD, final String INPUT) {
 
         String output = null;
 
@@ -50,7 +50,7 @@ public class SecurityFeatures {
         return output;
     }
 
-    public byte[] Encrypt(final String ENCRYPT_METHOD, final String DATA, final String KEY) throws Exception {
+    public byte[] encrypt(final String ENCRYPT_METHOD, final String DATA, final String KEY) throws Exception {
 
         KeyGenerator key = null;
         SecretKey sec = null;

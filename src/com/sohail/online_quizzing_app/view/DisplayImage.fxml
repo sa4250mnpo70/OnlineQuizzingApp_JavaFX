@@ -8,7 +8,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.DisplayImageController">
+<AnchorPane id="AnchorPane" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.DisplayImageController">
   <children>
     <ImageView fx:id="imageView" disable="false" fitHeight="400.0" fitWidth="600.0" focusTraversable="false" onContextMenuRequested="#exitImageView" onMouseClicked="#exitImageView" onMouseExited="#exitImageView" pickOnBounds="true" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <image>
@@ -17,6 +17,6 @@
     </ImageView>
   </children>
   <stylesheets>
-    <URL value="@styles/DisplayImage.css" />
+    <URL value="@styles/CommonStyles.css" />
   </stylesheets>
 </AnchorPane>

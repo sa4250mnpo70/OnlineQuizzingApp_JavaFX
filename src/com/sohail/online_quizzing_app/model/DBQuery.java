@@ -18,7 +18,7 @@ public class DBQuery {
     public DBQuery() {
     }
 
-    public ResultSet DBExecuteQuery(Connection connection, String str_query) throws Exception {
+    public ResultSet dbExecuteQuery(Connection connection, String str_query) throws Exception {
 
         Statement statement = null;
         if (connection.isValid(30)) {
@@ -38,7 +38,7 @@ public class DBQuery {
         }
     }
 
-    public int DBExecuteUpdate(Connection connection, String str_query) throws Exception {
+    public int dbExecuteUpdate(Connection connection, String str_query) throws Exception {
 
         Statement statement = null;
         if (connection.isValid(30)) {
@@ -58,13 +58,13 @@ public class DBQuery {
         }
     }
 
-    public int DBCreateDatabse(Connection connection, String str_databaseName) throws Exception {
+    public int dbCreateDatabse(Connection connection, String str_databaseName) throws Exception {
 
         String str_query = null;
         if (connection.isValid(30)) {
             str_query = "CREATE DATABASE " + str_databaseName;
             try {
-                return DBExecuteUpdate(connection, str_query);
+                return dbExecuteUpdate(connection, str_query);
             } catch (Exception e) {
                 throw e;
             }
@@ -74,12 +74,12 @@ public class DBQuery {
 
     }
 
-    public int DBCreateTable(Connection connection, String str_databaseName, String str_tableName, String str_tableQuery) throws Exception {
+    public int dbCreateTable(Connection connection, String str_databaseName, String str_tableName, String str_tableQuery) throws Exception {
 
         String str_Query = "CREATE TABLE " + str_databaseName + "." + str_tableName + str_tableQuery;
         if (connection.isValid(30)) {
             try {
-                return DBExecuteUpdate(connection, str_Query);
+                return dbExecuteUpdate(connection, str_Query);
             } catch (Exception e) {
                 throw e;
             }
@@ -89,14 +89,14 @@ public class DBQuery {
 
     }
 
-    public ResultSet DBReadDatabase(Connection connection, String str_databaseName) throws Exception {
+    public ResultSet dbReadDatabase(Connection connection, String str_databaseName) throws Exception {
 
         String str_query = null;
         ResultSet resultSet = null;
         if (connection.isValid(30)) {
             str_query = "SHOW TABLES FROM " + str_databaseName;
             try {
-                resultSet = DBExecuteQuery(connection, str_query);
+                resultSet = dbExecuteQuery(connection, str_query);
                 return resultSet;
             } catch (Exception e) {
                 throw e;
@@ -106,7 +106,7 @@ public class DBQuery {
         }
     }
 
-    public ResultSet DBReadTable(Connection connection, String str_databaseName, String str_tableName, String str_readQuery) throws Exception {
+    public ResultSet dbReadTable(Connection connection, String str_databaseName, String str_tableName, String str_readQuery) throws Exception {
 
         String str_query = null;
         ResultSet resultSet = null;
@@ -117,7 +117,7 @@ public class DBQuery {
                 str_query = str_readQuery;
             }
             try {
-                resultSet = DBExecuteQuery(connection, str_query);
+                resultSet = dbExecuteQuery(connection, str_query);
 
                 resultSet.beforeFirst();
                 if (resultSet.next()) {
@@ -134,12 +134,12 @@ public class DBQuery {
         }
     }
 
-    public int DBDeleteDatabase(Connection connection, String str_databaseName) throws Exception {
+    public int dbDeleteDatabase(Connection connection, String str_databaseName) throws Exception {
 
         String str_query = "DROP DATABASE " + str_databaseName;
         if (connection.isValid(30)) {
             try {
-                return DBExecuteUpdate(connection, str_query);
+                return dbExecuteUpdate(connection, str_query);
             } catch (Exception e) {
                 throw e;
             }
@@ -148,12 +148,12 @@ public class DBQuery {
         }
     }
 
-    public int DBDeleteTable(Connection connection, String str_databaseName, String str_tableName) throws Exception {
+    public int dbDeleteTable(Connection connection, String str_databaseName, String str_tableName) throws Exception {
 
         String str_Query = "DROP TABLE " + str_databaseName + "." + str_tableName;
         if (connection.isValid(30)) {
             try {
-                return DBExecuteUpdate(connection, str_Query);
+                return dbExecuteUpdate(connection, str_Query);
             } catch (Exception e) {
                 throw e;
             }
@@ -162,12 +162,12 @@ public class DBQuery {
         }
     }
 
-    public int DBDeleteTableRow(Connection connection, String str_databaseName, String str_tableName, String str_where, String str_whereValue) throws Exception {
+    public int dbDeleteTableRow(Connection connection, String str_databaseName, String str_tableName, String str_where, String str_whereValue) throws Exception {
 
         String str_Query = "DELETE FROM " + str_databaseName + "." + str_tableName + " WHERE " + str_where + " = " + str_whereValue;
         if (connection.isValid(30)) {
             try {
-                return DBExecuteUpdate(connection, str_Query);
+                return dbExecuteUpdate(connection, str_Query);
             } catch (Exception e) {
                 throw e;
             }

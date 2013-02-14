@@ -50,7 +50,7 @@ public class DBUsers {
         DBTableSubmittedAnswers = DBProperties.getProperty("TableSubmittedAnswers");
     }
 
-    public String ValidateUser(String username, String password) {
+    public String validateUser(String username, String password) {
         String uuid = null;
         String match_student_uuid = null;
         String match_admin_uuid = null;
@@ -68,25 +68,25 @@ public class DBUsers {
         DBQuery dBQuery3 = null;
         ResultSet result = null;
         try {
-            connection1 = DBCon.DBConnect();
-            connection2 = DBCon.DBConnect();
-            connection3 = DBCon.DBConnect();
+            connection1 = DBCon.dbConnect();
+            connection2 = DBCon.dbConnect();
+            connection3 = DBCon.dbConnect();
             dBQuery1 = new DBQuery();
             dBQuery2 = new DBQuery();
             dBQuery3 = new DBQuery();
-            result = dBQuery1.DBReadTable(connection1, DBDatabaseName, DBTableUsers, query);
+            result = dBQuery1.dbReadTable(connection1, DBDatabaseName, DBTableUsers, query);
             uuid = result.getString("uuid");
             //Check for Student
             match_student_uuid = "SELECT id FROM " + DBTableStudents
                     + " WHERE uuid_user = '" + uuid + "'";
-            result = dBQuery2.DBReadTable(connection2, DBDatabaseName, DBTableStudents, match_student_uuid);
+            result = dBQuery2.dbReadTable(connection2, DBDatabaseName, DBTableStudents, match_student_uuid);
             if (result.getFetchSize() != 0) {
                 return "STUDENT";
             } else {
                 //Check for Admin User
                 match_admin_uuid = "SELECT id FROM " + DBTableAdmin
                         + " WHERE uuid_user = '" + uuid + "'";
-                result = dBQuery3.DBReadTable(connection3, DBDatabaseName, DBTableAdmin, match_admin_uuid);
+                result = dBQuery3.dbReadTable(connection3, DBDatabaseName, DBTableAdmin, match_admin_uuid);
                 if (result.getFetchSize() != 0) {
                     return "ADMIN";
                 } else {
@@ -102,7 +102,7 @@ public class DBUsers {
         }
     }
 
-    public void CreateUser(HashMap<String, String> valuesMap) {
+    public void createUser(HashMap<String, String> valuesMap) {
 
         String query = "INSERT INTO  " + DBDatabaseName + "." + DBTableUsers
                 + "( uuid , username , password , first_name , middle_name , last_name , email1 , email2 , phone , mobile , address , dob , date_of_joining ) VALUES ( '"
@@ -121,14 +121,14 @@ public class DBUsers {
                 + valuesMap.get("date_of_joining")
                 + "'  )";
 
-        int result = ExecuteUpdate(query);
+        int result = executeUpdate(query);
 
         //TEST
         System.out.println("QUERY ADD USER: \n" + query);
         System.out.println("QUERY ADD USER RESULT: " + result);
     }
 
-    public void CreateStudent(String uuid_user, String branch, String roll_number) {
+    public void createStudent(String uuid_user, String branch, String roll_number) {
         //Query Example
         /*
          INSERT INTO  `onlinequizzingapp`.`students` ( `id` , `uuid_user` , `branch` , `roll_number` ) VALUES ( NULL ,  '12345-12345',  'Electronics',  '460/08' );
@@ -140,14 +140,14 @@ public class DBUsers {
                 + roll_number
                 + "'  )";
 
-        int result = ExecuteUpdate(query);
+        int result = executeUpdate(query);
 
         //TEST
         System.out.println("QUERY ADD STUDENT: \n" + query);
 
     }
 
-    public void CreateAdmin(String uuid_user) {
+    public void createAdmin(String uuid_user) {
         //Query Example
         /*
          INSERT INTO  `onlinequizzingapp`.`admin` ( `uuid_user` ) VALUES ( '12345-12345' );
@@ -158,48 +158,48 @@ public class DBUsers {
                 + uuid_user
                 + "'  )";
 
-        int result = ExecuteUpdate(query);
+        int result = executeUpdate(query);
 
         //TEST
         System.out.println("QUERY ADD ADMIN: \n" + query);
     }
 
-    public void ReadUser() {
+    public void readUser() {
     }
 
-    public void ReadStudent() {
+    public void readStudent() {
     }
 
-    public void ReadAdmin() {
+    public void readAdmin() {
     }
 
-    public void UpdateUser() {
+    public void updateUser() {
     }
 
-    public void UpdateStudent() {
+    public void updateStudent() {
     }
 
-    public void UpdateAdmin() {
+    public void updateAdmin() {
     }
 
-    public void DeleteUser() {
+    public void deleteUser() {
     }
 
-    public void DeleteStudent() {
+    public void deleteStudent() {
     }
 
-    public void DeleteAdmin() {
+    public void deleteAdmin() {
     }
 
-    private int ExecuteUpdate(String query) {
+    private int executeUpdate(String query) {
         DBConnection DBCon = new DBConnection(DBURL, DBUsername, DBPassword, DBDatabaseName);
         Connection connection = null;
         DBQuery dBQuery = null;
         int result = 0;
         try {
-            connection = DBCon.DBConnect();
+            connection = DBCon.dbConnect();
             dBQuery = new DBQuery();
-            result = dBQuery.DBExecuteUpdate(connection, query);
+            result = dBQuery.dbExecuteUpdate(connection, query);
         } catch (MySQLIntegrityConstraintViolationException ex) {
             ex.printStackTrace();
         } catch (Exception ex) {

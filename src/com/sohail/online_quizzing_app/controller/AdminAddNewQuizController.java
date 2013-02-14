@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -49,6 +50,25 @@ public class AdminAddNewQuizController implements Initializable {
     private Button start;
     private Metadata metadata = Metadata.getInstance();
 
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
+
+    
     public void enableTopic(KeyEvent event) {
         cancel.setDisable(false);
         topic.setDisable(false);
@@ -131,6 +151,9 @@ public class AdminAddNewQuizController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

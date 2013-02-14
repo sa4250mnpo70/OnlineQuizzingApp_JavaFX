@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -42,6 +43,24 @@ public class AdminAddOptionController implements Initializable {
     @FXML
     private Button save;
     private String image_data = null;
+
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
 
     public void enableCancelAndClearKeyEvent(KeyEvent event) {
         cancel.setDisable(false);
@@ -89,7 +108,7 @@ public class AdminAddOptionController implements Initializable {
         map.put("uuid_question", metadata.getQuestionMetadata().get("uuid"));
         metadata.setOptionMetadata(map);
 
-        SerializeXML.getInstance().AddOptionsToQuestion(map);
+        SerializeXML.getInstance().addOptionsToQuestion(map);
 
         //Load the Add Option Scene
         SceneLoaders.getInstance().gotoAdminAddOption(OnlineQuizzingApp.getInstance().getStage());

@@ -6,7 +6,6 @@ package com.sohail.online_quizzing_app.controller;
 
 import com.sohail.online_quizzing_app.AllScenesInterface;
 import com.sohail.online_quizzing_app.OnlineQuizzingApp;
-import com.sohail.online_quizzing_app.StageCreator;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
@@ -28,7 +27,7 @@ import javafx.util.Duration;
  * @author sohail.alam
  */
 public class _AppHeaderController implements Initializable {
-
+    
     private double xOffset = 0;
     private double yOffset = 0;
     @FXML
@@ -89,21 +88,7 @@ public class _AppHeaderController implements Initializable {
      * @param event
      */
     public void handleAppMouseClick_Hold(MouseEvent event) {
-
-        Stage stage = OnlineQuizzingApp.getInstance().getStage();
-
-        xOffset = event.getSceneX();
-        yOffset = event.getSceneY();
-
-        if (event.getButton().equals(MouseButton.PRIMARY)) {
-            if (event.getClickCount() == 2) {
-                if (stage.isFullScreen()) {
-                    stage.setFullScreen(false);
-                } else {
-                    stage.setFullScreen(true);
-                }
-            }
-        }
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
     }
 
     /**
@@ -112,10 +97,7 @@ public class _AppHeaderController implements Initializable {
      * @param event
      */
     public void handleAppMouseDrag(MouseEvent event) {
-        if (!OnlineQuizzingApp.getInstance().getStage().isFullScreen()) {
-            OnlineQuizzingApp.getInstance().getStage().setX(event.getScreenX() - xOffset);
-            OnlineQuizzingApp.getInstance().getStage().setY(event.getScreenY() - yOffset);
-        }
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
     }
 
     /**
@@ -130,11 +112,11 @@ public class _AppHeaderController implements Initializable {
             OnlineQuizzingApp.getInstance().getStage().setFullScreen(true);
         }
     }
-
+    
     public void setHeaderTitle(String message, double duration, String message_type) {
-
+        
         txt_headerTitle.setText(message);
-
+        
         switch (message_type) {
             case "OK":
                 txt_headerTitle.setFill(Color.GREEN);
@@ -151,7 +133,7 @@ public class _AppHeaderController implements Initializable {
             default:
                 throw new AssertionError();
         }
-
+        
         FadeTransition ft = new FadeTransition(
                 Duration.millis(duration), txt_headerTitle);
         ft.setFromValue(1.0);
@@ -170,7 +152,7 @@ public class _AppHeaderController implements Initializable {
         // TODO
         String stageTitle = OnlineQuizzingApp.getInstance().getStage().getTitle();
         try {
-
+            
             if (stageTitle.equals(AllScenesInterface.ONLINE_QUIZZING_APP_FXML)) {
                 txt_headerInfo.setVisible(false);
                 txt_headerUserLoggedInName.setVisible(false);
@@ -180,7 +162,7 @@ public class _AppHeaderController implements Initializable {
                 txt_headerUserLoggedInName.setVisible(true);
                 btn_appLogout.setVisible(true);
             }
-
+            
             switch (stageTitle) {
                 case AllScenesInterface.ADMIN_ADD_NEW_QUIZ_FXML:
                     setHeaderTitle("ADMIN_ADD_NEW_QUIZ_FXML", 5000, "OK");

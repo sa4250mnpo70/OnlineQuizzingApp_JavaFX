@@ -7,17 +7,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="AdminAddNewQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizFinishController">
-    <bottom>
-        <fx:include source="_AppFooter.fxml" />
-    </bottom>
-    <left>
-        <fx:include source="_AppAdminSideBar.fxml" />
-    </left>
-    <stylesheets>
-        <URL value="@styles/AdminAddNewQuiz.css" />
-    </stylesheets>
-    <top>
-        <fx:include source="_AppHeader.fxml" />
-    </top>
+<BorderPane id="AdminAddNewQuiz" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizFinishController">
+  <bottom>
+    <fx:include source="_AppFooter.fxml" />
+  </bottom>
+  <left>
+    <fx:include source="_AppAdminSideBar.fxml" />
+  </left>
+  <stylesheets>
+    <URL value="@styles/CommonStyles.css" />
+  </stylesheets>
+  <top>
+    <fx:include source="_AppHeader.fxml" />
+  </top>
 </BorderPane>

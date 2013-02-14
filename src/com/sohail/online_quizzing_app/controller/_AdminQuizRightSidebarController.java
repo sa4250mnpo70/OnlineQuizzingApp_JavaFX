@@ -19,6 +19,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -46,9 +47,27 @@ public class _AdminQuizRightSidebarController implements Initializable {
     @FXML
     private Button publish_quiz;
 
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
+
     public void createNextQuestion(ActionEvent event) {
         Metadata metadata = Metadata.getInstance();
-        SerializeXML.getInstance().AddQuestionsToQuiz(metadata.getQuestionMetadata());
+        SerializeXML.getInstance().addQuestionsToQuiz(metadata.getQuestionMetadata());
         SceneLoaders.getInstance().gotoAdminAddQuestion(OnlineQuizzingApp.getInstance().getStage());
     }
 

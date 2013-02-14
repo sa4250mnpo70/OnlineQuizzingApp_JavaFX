@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="_AppFooter" alignment="CENTER" prefHeight="25.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller._AppFooterController">
+<HBox id="_AppFooter" alignment="CENTER" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="25.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller._AppFooterController">
   <children>
     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="SOMETIMES">
       <children>

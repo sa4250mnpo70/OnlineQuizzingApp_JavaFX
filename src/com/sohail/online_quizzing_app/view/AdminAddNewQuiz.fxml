@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="AdminAddNewQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddNewQuizController">
+<BorderPane id="AdminAddNewQuiz" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddNewQuizController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>
@@ -51,14 +51,20 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
           <children>
-            <TextField fx:id="topic" disable="true" onKeyPressed="#enableTimeLimitAndDueDate" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Bipolar Junction Transistor" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+            <TextField fx:id="topic" disable="true" onKeyPressed="#enableTimeLimitAndDueDate" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Bipolar Junction Transistor" HBox.hgrow="SOMETIMES">
               <tooltip>
                 <Tooltip text="Only Alpha-Numeric Characters are allowed. Maximum Length = 255" />
               </tooltip>
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
             </TextField>
           </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
           <children>
@@ -254,7 +260,7 @@
     <fx:include source="_AppAdminSideBar.fxml" />
   </left>
   <stylesheets>
-    <URL value="@styles/AdminAddNewQuiz.css" />
+    <URL value="@styles/CommonStyles.css" />
   </stylesheets>
   <top>
     <fx:include source="_AppHeader.fxml" />

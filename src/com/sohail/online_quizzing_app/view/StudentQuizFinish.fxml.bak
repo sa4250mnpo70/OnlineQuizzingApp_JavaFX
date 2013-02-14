@@ -3,9 +3,11 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="AppAnchorPane" onMouseClicked="#handleAppMouseClick_Hold" onMouseDragged="#handleAppMouseDrag" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminViewScoresController">
+<BorderPane id="AdminAddNewQuiz" onMouseClicked="#handleAppMouseClick_Hold" onMouseDragged="#handleAppMouseDrag" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizFinishController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>

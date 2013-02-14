@@ -8,34 +8,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="AdminAddNewQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddNewQuizController">
+<BorderPane id="AdminAddNewQuiz" onMouseClicked="#handleAppMouseClick_Hold" onMouseDragged="#handleAppMouseDrag" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.AdminAddNewQuizController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>
   <center>
     <GridPane>
       <children>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
-          <children>
-            <TextField fx:id="subject" onKeyPressed="#enableTopic" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Analog Electronics" HBox.hgrow="SOMETIMES">
-              <tooltip>
-                <Tooltip text="Only Alpha-Numeric Characters are allowed. Maximum Length = 255" />
-              </tooltip>
-              <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-              </HBox.margin>
-            </TextField>
-          </children>
-        </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
-          <children>
-            <TextField fx:id="topic" disable="true" onKeyPressed="#enableTimeLimitAndDueDate" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Bipolar Junction Transistor" HBox.hgrow="SOMETIMES" HBox.margin="$x1">
-              <tooltip>
-                <Tooltip text="Only Alpha-Numeric Characters are allowed. Maximum Length = 255" />
-              </tooltip>
-            </TextField>
-          </children>
-        </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Subject: " HBox.hgrow="SOMETIMES">
@@ -48,9 +27,48 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField fx:id="subject" onKeyPressed="#enableTopic" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Analog Electronics" HBox.hgrow="SOMETIMES">
+              <tooltip>
+                <Tooltip text="Only Alpha-Numeric Characters are allowed. Maximum Length = 255" />
+              </tooltip>
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Topic: " HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+          <children>
+            <TextField fx:id="topic" disable="true" onKeyPressed="#enableTimeLimitAndDueDate" prefHeight="-1.0" prefWidth="-1.0" promptText="Example: Bipolar Junction Transistor" HBox.hgrow="SOMETIMES">
+              <tooltip>
+                <Tooltip text="Only Alpha-Numeric Characters are allowed. Maximum Length = 255" />
+              </tooltip>
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </TextField>
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Time Limit:  " HBox.hgrow="SOMETIMES">
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
               </HBox.margin>
@@ -75,6 +93,18 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+          <children>
+            <Label text="Due Date: " HBox.hgrow="SOMETIMES">
+              <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </GridPane.margin>
+        </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
           <children>
             <TextField fx:id="due_date" disable="true" prefHeight="-1.0" prefWidth="-1.0" promptText="YYYY-MM-DD (OPTIONAL)" HBox.hgrow="SOMETIMES">
@@ -90,31 +120,6 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
-          <children>
-            <Label text="Time Limit:  " HBox.hgrow="SOMETIMES">
-              <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-              </HBox.margin>
-            </Label>
-          </children>
-          <GridPane.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-          </GridPane.margin>
-        </HBox>
-        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
-          <children>
-            <Label text="Due Date: " HBox.hgrow="SOMETIMES">
-              <HBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-              </HBox.margin>
-            </Label>
-          </children>
-          <GridPane.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
-          </GridPane.margin>
-        </HBox>
-        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
         <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Description: " HBox.hgrow="SOMETIMES">
@@ -142,16 +147,13 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="7" GridPane.vgrow="SOMETIMES">
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
           <children>
-            <TextField fx:id="total_questions_to_solve" disable="true" onKeyPressed="#enableStartButton" prefWidth="200.0" promptText="Example: 20" HBox.hgrow="SOMETIMES">
-              <tooltip>
-                <Tooltip text="Only Numeric Characters are allowed. Maximum Value = 99" />
-              </tooltip>
+            <Label text="Total Questions In Questionbank: " HBox.hgrow="SOMETIMES">
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
               </HBox.margin>
-            </TextField>
+            </Label>
           </children>
           <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
@@ -184,13 +186,16 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
           </GridPane.margin>
         </HBox>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="7" GridPane.vgrow="SOMETIMES">
           <children>
-            <Label text="Total Questions In Questionbank: " HBox.hgrow="SOMETIMES">
+            <TextField fx:id="total_questions_to_solve" disable="true" onKeyPressed="#enableStartButton" prefWidth="200.0" promptText="Example: 20" HBox.hgrow="SOMETIMES">
+              <tooltip>
+                <Tooltip text="Only Numeric Characters are allowed. Maximum Value = 99" />
+              </tooltip>
               <HBox.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
               </HBox.margin>
-            </Label>
+            </TextField>
           </children>
           <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
@@ -255,7 +260,7 @@
     <fx:include source="_AppAdminSideBar.fxml" />
   </left>
   <stylesheets>
-    <URL value="@styles/AdminAddNewQuiz.css" />
+    <URL value="@styles/CommonStyles.css" />
   </stylesheets>
   <top>
     <fx:include source="_AppHeader.fxml" />

@@ -26,15 +26,15 @@ public class Metadata {
         optionMetadata.put("option_number", "0");
     }
     
-    public void AddToQuizMetadata(String key, String value){
+    public void addToQuizMetadata(String key, String value){
         quizMetadata.put(key, value);
     }
     
-    public void AddToQuestionMetadata(String key, String value){
+    public void addToQuestionMetadata(String key, String value){
         questionMetadata.put(key, value);
     }
     
-    public void AddToOptionMetadata(String key, String value){
+    public void addToOptionMetadata(String key, String value){
         
     }
 

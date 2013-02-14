@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="StudentQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizController">
+<BorderPane id="StudentQuiz" onMouseClicked="#handleAppMouseClick_Hold" onMouseDragged="#handleAppMouseDrag" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>
@@ -36,25 +36,41 @@
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Option 1: " />
-            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+              <tooltip>
+                <Tooltip text="Your Selection will automatically be saved!" />
+              </tooltip>
+            </CheckBox>
           </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Option 2: " />
-            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+              <tooltip>
+                <Tooltip text="Your Selection will automatically be saved!" />
+              </tooltip>
+            </CheckBox>
           </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
           <children>
             <Label prefWidth="52.999908447265625" text="Option 3: " />
-            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+              <tooltip>
+                <Tooltip text="Your Selection will automatically be saved!" />
+              </tooltip>
+            </CheckBox>
           </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="6" GridPane.vgrow="SOMETIMES">
           <children>
             <Label text="Option 4: " />
-            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1" />
+            <CheckBox mnemonicParsing="false" text="Check Me for your Answer " HBox.hgrow="SOMETIMES" HBox.margin="$x1">
+              <tooltip>
+                <Tooltip text="Empty Tooltip" />
+              </tooltip>
+            </CheckBox>
           </children>
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="1" GridPane.rowSpan="5" GridPane.vgrow="SOMETIMES">
@@ -151,7 +167,7 @@
     </GridPane>
   </center>
   <stylesheets>
-    <URL value="@styles/StudentQuiz.css" />
+    <URL value="@styles/CommonStyles.css" />
   </stylesheets>
   <top>
     <fx:include source="_AppHeader.fxml" />

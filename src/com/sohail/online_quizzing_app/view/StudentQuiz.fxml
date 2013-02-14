@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="StudentQuiz" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizController">
+<BorderPane id="StudentQuiz" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentQuizController">
   <bottom>
     <fx:include source="_AppFooter.fxml" />
   </bottom>
@@ -167,7 +167,7 @@
     </GridPane>
   </center>
   <stylesheets>
-    <URL value="@styles/StudentQuiz.css" />
+    <URL value="@styles/CommonStyles.css" />
   </stylesheets>
   <top>
     <fx:include source="_AppHeader.fxml" />

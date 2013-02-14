@@ -9,8 +9,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -36,7 +34,9 @@ public class BootStrap {
             DBPropertiesFileIS = new FileInputStream(DBPropertiesFile);
             this.DBProperties.load(DBPropertiesFileIS);
         } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
         } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 

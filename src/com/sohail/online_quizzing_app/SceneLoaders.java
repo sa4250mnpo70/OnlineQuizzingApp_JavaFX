@@ -4,8 +4,6 @@
  */
 package com.sohail.online_quizzing_app;
 
-import static com.sohail.online_quizzing_app.AllScenesInterface.ADMIN_ADD_QUESTION_CSS;
-import static com.sohail.online_quizzing_app.AllScenesInterface.ADMIN_ADD_QUESTION_FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
@@ -48,7 +46,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminHome(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_HOME_FXML, ADMIN_HOME_CSS, stage);
+            replaceSceneContent(ADMIN_HOME_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -59,7 +57,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminManageUsers(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_MANAGE_USERS_FXML, ADMIN_MANAGE_USERS_CSS, stage);
+            replaceSceneContent(ADMIN_MANAGE_USERS_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,7 +68,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminManageQuiz(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_MANAGE_QUIZ_FXML, ADMIN_MANAGE_QUIZ_CSS, stage);
+            replaceSceneContent(ADMIN_MANAGE_QUIZ_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -81,7 +79,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminViewQuiz(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_VIEW_QUIZ_FXML, ADMIN_VIEW_QUIZ_CSS, stage);
+            replaceSceneContent(ADMIN_VIEW_QUIZ_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -92,7 +90,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminViewScores(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_VIEW_SCORES_FXML, ADMIN_VIEW_SCORES_CSS, stage);
+            replaceSceneContent(ADMIN_VIEW_SCORES_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -103,7 +101,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminAddNewQuiz(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_ADD_NEW_QUIZ_FXML, ADMIN_ADD_NEW_QUIZ_CSS, stage);
+            replaceSceneContent(ADMIN_ADD_NEW_QUIZ_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -114,7 +112,7 @@ public class SceneLoaders implements AllScenesInterface {
      */
     public void gotoAdminAddQuestion(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_ADD_QUESTION_FXML, ADMIN_ADD_QUESTION_CSS, stage);
+            replaceSceneContent(ADMIN_ADD_QUESTION_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -122,7 +120,7 @@ public class SceneLoaders implements AllScenesInterface {
 
     public void gotoAdminAddOption(Stage stage) {
         try {
-            replaceSceneContent(ADMIN_ADD_OPTION_FXML, ADMIN_ADD_OPTION_CSS, stage);
+            replaceSceneContent(ADMIN_ADD_OPTION_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -130,7 +128,7 @@ public class SceneLoaders implements AllScenesInterface {
 
     public void gotoSignup(Stage stage) {
         try {
-            replaceSceneContent(SIGNUP_FXML, SIGNUP_CSS, stage);
+            replaceSceneContent(SIGNUP_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -138,7 +136,7 @@ public class SceneLoaders implements AllScenesInterface {
 
     public void gotoStudentHome(Stage stage) {
         try {
-            replaceSceneContent(STUDENT_HOME_FXML, STUDENT_HOME_CSS, stage);
+            replaceSceneContent(STUDENT_HOME_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -146,7 +144,7 @@ public class SceneLoaders implements AllScenesInterface {
 
     public void gotoStudentQuiz(Stage stage) {
         try {
-            replaceSceneContent(STUDENT_QUIZ_FXML, STUDENT_QUIZ_CSS, stage);
+            replaceSceneContent(STUDENT_QUIZ_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -154,7 +152,7 @@ public class SceneLoaders implements AllScenesInterface {
 
     public void gotoStudentQuizFinish(Stage stage) {
         try {
-            replaceSceneContent(STUDENT_QUIZ_FINISH_FXML, STUDENT_QUIZ_FINISH_CSS, stage);
+            replaceSceneContent(STUDENT_QUIZ_FINISH_FXML, COMMON_STYLES_CSS, stage);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -15,11 +15,6 @@ public class OnlineQuizzingApp extends Application {
 
     private static boolean isLoggedIn = false;
     private static OnlineQuizzingApp instance;
-    private Stage stage;
-
-    public OnlineQuizzingApp() {
-        instance = this;
-    }
 
     public static OnlineQuizzingApp getInstance() {
         return instance;
@@ -37,19 +32,6 @@ public class OnlineQuizzingApp extends Application {
         launch(args);
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        //Run the bootstarp
-        BootStrap.getInstance().Initialize();
-        try {
-            stage = primaryStage;
-            SceneLoaders.getInstance().gotoLogin(getStage());
-            primaryStage.show();
-        } catch (Exception ex) {
-            //Handle Exception
-        }
-    }
-
     /**
      * @return the isLoggedIn
      */
@@ -62,6 +44,24 @@ public class OnlineQuizzingApp extends Application {
      */
     public static void setIsLoggedIn(boolean isLoggedIn) {
         OnlineQuizzingApp.isLoggedIn = isLoggedIn;
+    }
+    private Stage stage;
+
+    public OnlineQuizzingApp() {
+        instance = this;
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        //Run the bootstarp
+        BootStrap.getInstance().Initialize();
+        try {
+            stage = primaryStage;
+            SceneLoaders.getInstance().gotoLogin(getStage());
+            primaryStage.show();
+        } catch (Exception ex) {
+            //Handle Exception
+        }
     }
 
     /**

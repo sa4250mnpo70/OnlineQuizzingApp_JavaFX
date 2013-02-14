@@ -24,6 +24,24 @@ public class DisplayImageController implements Initializable {
     @FXML
     private ImageView imageView;
 
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
+
     public void exitImageView(MouseEvent event) {
         StageCreator.getInstance().exitNewStage();
     }
@@ -38,6 +56,9 @@ public class DisplayImageController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

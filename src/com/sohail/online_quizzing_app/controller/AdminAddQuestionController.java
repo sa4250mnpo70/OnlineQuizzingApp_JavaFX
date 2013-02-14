@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -43,6 +44,24 @@ public class AdminAddQuestionController implements Initializable {
     private Button save;
     String image_data = null;
     private Metadata metadata = Metadata.getInstance();
+
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
 
     public void enableCancelAndClearKeyEvent(KeyEvent event) {
         cancel.setDisable(false);

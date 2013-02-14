@@ -5,8 +5,6 @@
 package com.sohail.online_quizzing_app;
 
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
@@ -18,24 +16,23 @@ import javafx.stage.StageStyle;
  *
  * @author sohail.alam
  */
-public class StageCreator{
-    
-    private Stage stage;
+public class StageCreator {
+
     private static StageCreator instance;
-    
-    public static StageCreator getInstance(){
+
+    public static StageCreator getInstance() {
         if (instance == null) {
             return instance = new StageCreator();
         } else {
             return instance;
         }
     }
-    
-    private StageCreator(){
-        
+    private Stage stage;
+
+    private StageCreator() {
     }
-    
-    public void createNewStage(String fxml_path, String css_path){
+
+    public void createNewStage(String fxml_path, String css_path) {
         try {
             if (stage == null) {
                 stage = new Stage();
@@ -50,8 +47,8 @@ public class StageCreator{
             ex.printStackTrace();
         }
     }
-    
-    public void exitNewStage(){
+
+    public void exitNewStage() {
         stage.close();
         stage = null;
     }

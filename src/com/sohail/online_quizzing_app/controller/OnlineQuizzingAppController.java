@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 /**
@@ -45,16 +46,23 @@ public class OnlineQuizzingAppController implements Initializable {
     @FXML
     private PasswordField txtbox_signupPassword2;
 
-    /*
+    /**
+     * Click and Hold to make window draggable
      *
-     * @param url
-     * @param rb
+     * @param event
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
     }
 
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
 
     /*
      * Login User. If the username has attribute Admin, then take the user to
@@ -208,5 +216,15 @@ public class OnlineQuizzingAppController implements Initializable {
             txt_signupMessage.setText("Password Matched");
             btn_signup.setDisable(false);
         }
+    }
+
+    /*
+     *
+     * @param url
+     * @param rb
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
 }

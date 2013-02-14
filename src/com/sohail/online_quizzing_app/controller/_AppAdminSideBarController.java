@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -30,6 +31,24 @@ public class _AppAdminSideBarController implements Initializable {
     private Button btn_adminViewQuiz;
     @FXML
     private Button btn_adminViewScores;
+
+    /**
+     * Click and Hold to make window draggable
+     *
+     * @param event
+     */
+    public void handleAppMouseClick_Hold(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseClick_Hold(event);
+    }
+
+    /**
+     * Drag to drag window
+     *
+     * @param event
+     */
+    public void handleAppMouseDrag(MouseEvent event) {
+        CommonEventHandlers.getInstance().handleAppMouseDrag(event);
+    }
 
     //*********** All Events Common To ADMIN Section
     /*
@@ -79,8 +98,9 @@ public class _AppAdminSideBarController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
      * @param url
-     * @param rb  
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

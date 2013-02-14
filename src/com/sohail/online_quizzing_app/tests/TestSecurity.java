@@ -19,7 +19,7 @@ public class TestSecurity {
 
         byte[] encrypted = null;
         try {
-            encrypted = security.Encrypt("AES", "Hello World!", null);
+            encrypted = security.encrypt("AES", "Hello World!", null);
         } catch (Exception ex) {
             Logger.getLogger(TestSecurity.class.getName()).log(Level.SEVERE, null, ex);
         }

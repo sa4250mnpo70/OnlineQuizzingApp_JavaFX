@@ -8,9 +8,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox id="_AdminQuizRightSidebar" alignment="CENTER" prefHeight="475.0" prefWidth="150.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller._AdminQuizRightSidebarController">
+<VBox id="_AdminQuizRightSidebar" alignment="CENTER" onMouseClicked="#handleAppMouseClick_Hold" onMouseDragged="#handleAppMouseDrag" prefHeight="475.0" prefWidth="150.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller._AdminQuizRightSidebarController">
   <children>
-    <Label text="Total Questions Added :" VBox.vgrow="SOMETIMES">
+    <Label fx:id="total_q_added_label" text="Total Questions Added :" VBox.vgrow="SOMETIMES">
       <VBox.margin>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </VBox.margin>

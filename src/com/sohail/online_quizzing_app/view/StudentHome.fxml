@@ -7,14 +7,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="StudentHome" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentHomeController">
-    <bottom>
-        <fx:include source="_AppFooter.fxml" />
-    </bottom>
-    <stylesheets>
-        <URL value="@styles/StudentHome.css" />
-    </stylesheets>
-    <top>
-        <fx:include source="_AppHeader.fxml" />
-    </top>
+<BorderPane id="StudentHome" onMouseDragged="#handleAppMouseDrag" onMousePressed="#handleAppMouseClick_Hold" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sohail.online_quizzing_app.controller.StudentHomeController">
+  <bottom>
+    <fx:include source="_AppFooter.fxml" />
+  </bottom>
+  <stylesheets>
+    <URL value="@styles/CommonStyles.css" />
+  </stylesheets>
+  <top>
+    <fx:include source="_AppHeader.fxml" />
+  </top>
 </BorderPane>

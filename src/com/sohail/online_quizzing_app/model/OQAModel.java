@@ -17,7 +17,7 @@ public class OQAModel {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; // JDBC driver name
     private static final String JDBC_URL = "jdbc:mysql://"; // JDBC URL
 
-    public void DBConnect() {
+    public void dbConnect() {
         Properties db_prop = BootStrap.getInstance().getDBProperties();
         String db_url = JDBC_URL + db_prop.getProperty("URL");
         String db_username = db_prop.getProperty("Username");

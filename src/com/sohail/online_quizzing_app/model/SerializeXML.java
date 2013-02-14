@@ -50,7 +50,7 @@ public class SerializeXML {
         metadata.getOptionMetadata().put("option_number", "0");
     }
 
-    public void AddOptionsToQuestion(HashMap<String, String> map) {
+    public void addOptionsToQuestion(HashMap<String, String> map) {
 
         String option = map.get("option");
         String option_image = map.get("option_image");
@@ -71,7 +71,7 @@ public class SerializeXML {
         array_of_option_lists.add(question_number - 1, localOptionsList);
     }
 
-    public void AddQuestionsToQuiz(HashMap<String, String> map) {
+    public void addQuestionsToQuiz(HashMap<String, String> map) {
 
         String question = map.get("question");
         String question_image = map.get("question_image");

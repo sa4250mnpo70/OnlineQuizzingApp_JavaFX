@@ -31,11 +31,11 @@ public class DBConnection {
         DBConnection.database_name = database_name;
     }
 
-    public Connection DBConnect() throws Exception {
-        return DBConnect(db_url, db_username, db_password, database_name);
+    public Connection dbConnect() throws Exception {
+        return dbConnect(db_url, db_username, db_password, database_name);
     }
 
-    public Connection DBConnect(String DB_URL, String DB_USERNAME, String DB_PASSWORD, String str_databaseName) throws Exception {
+    public Connection dbConnect(String DB_URL, String DB_USERNAME, String DB_PASSWORD, String str_databaseName) throws Exception {
 
         String DatabaseURL = null;
         Connection connection = null;
@@ -55,7 +55,7 @@ public class DBConnection {
         }
     }
 
-    public boolean DBDisConnect(Connection connection) throws Exception {
+    public boolean dbDisConnect(Connection connection) throws Exception {
         try {
             if (connection != null) {
                 connection.close();
