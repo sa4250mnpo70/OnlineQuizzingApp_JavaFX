@@ -9,6 +9,7 @@ import com.sohail.online_quizzing_app.model.pojo.QuestionStructure;
 import com.sohail.online_quizzing_app.model.pojo.QuizStructure;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -28,8 +29,10 @@ public class TestDeserialize {
             ex.printStackTrace();
         }
 
-        ArrayList<QuestionStructure> questions = quiz.getQuestions();
+        HashMap<Integer, HashMap<String, String>> quizMap = new HashMap<>();
+        HashMap<String, String> tempMap = new HashMap<>();
 
+        ArrayList<QuestionStructure> questions = quiz.getQuestions();
         System.out.println("Quiz Details:");
         System.out.println("Quiz Subject: " + quiz.getSubject());
         System.out.println("Quiz Topic: " + quiz.getTopic());
@@ -49,6 +52,7 @@ public class TestDeserialize {
             System.out.println("---------------------------------------------------");
             //Iterate over each options of the question
             ArrayList<OptionStructure> options = quiz.getOptionList();
+
             for (OptionStructure optionStructure : options) {
                 System.out.println("Option: " + optionStructure.getOption());
                 System.out.println("Option Image: " + optionStructure.getOptionImage());
@@ -57,7 +61,14 @@ public class TestDeserialize {
                 System.out.println("Question UUID: " + optionStructure.getUuid_question());
                 System.out.println("Quiz UUID: " + optionStructure.getUuid_quiz());
                 System.out.println("---------------------------------------------------");
+
+                tempMap.put("Option Number", String.valueOf(optionStructure.getOptionNumber()));
+                tempMap.put("Option", optionStructure.getOption());
+                tempMap.put("Option Image", optionStructure.getOptionImage());
             }
+            tempMap.put("Question", questionStructure.getQuestion());
+            tempMap.put("Question Image", questionStructure.getQuestionImage());
+            quizMap.put(questionStructure.getQuestionNumber(), tempMap);
         }
     }
 }

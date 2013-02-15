@@ -1,0 +1,1 @@
+keytool -genkey -alias Sohail.Alam -keyalg RSA -validity 3600 -keysize 2048 -keystore www_ecenitp_com.jks -storepass SohailAlam2@Hotmail.Com -dname "CN=www.ecenitp.com,OU=ECE, O=NITPatna, L=Patna, ST=Bihar, C=IN" && keytool -certreq -alias Sohail.Alam -file www_ecenitp_com.csr -keystore www_ecenitp_com.jks -storepass SohailAlam2@Hotmail.Com
